@@ -803,35 +803,49 @@ body.unified-site .nx-fixed-login { display: none; }
 .ui-cta-band {
     background: linear-gradient(135deg, var(--ui-navy) 0%, #1e3a5f 100%);
     color: #fff;
-    padding: clamp(3rem, 6vw, 4.5rem) 0;
+    padding: clamp(2.75rem, 5vw, 4rem) 0;
     text-align: center;
+    border-radius: 28px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
 }
 
 .ui-cta-band h2 {
     font-family: var(--ui-display);
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: clamp(2rem, 3vw, 2.7rem);
     margin: 0 0 1rem;
 }
 
 .ui-cta-band p {
-    color: rgba(255, 255, 255, 0.75);
-    margin: 0 0 2rem;
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0 0 1.5rem;
     font-size: 1.05rem;
+}
+
+.ui-cta-band .ui-btn-getstarted {
+    background: var(--ui-green);
+    color: #0a0a0a;
+    border: none;
+    box-shadow: 0 14px 32px rgba(74, 222, 128, 0.18);
+}
+
+.ui-cta-band .ui-btn-getstarted:hover {
+    background: #86efac;
+    color: #0a0a0a;
 }
 
 .ui-cta-stats {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
     flex-wrap: wrap;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .ui-cta-stats div strong {
     display: block;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 800;
 }
 

@@ -1,133 +1,147 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const track = document.querySelector(".tm-slider-track");
-    const cards = document.querySelectorAll(".tm-card");
-    const dots = document.querySelectorAll(".tm-dot");
-    const leftArrow = document.querySelector(".tm-arrow-left");
-    const rightArrow = document.querySelector(".tm-arrow-right");
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.tm-section').forEach(initTestimonialSlider);
+});
 
+function initTestimonialSlider(section) {
+    const track = section.querySelector('.tm-slider-track');
+    const container = section.querySelector('.tm-slider-container');
+    const cards = section.querySelectorAll('.tm-card');
+    const dotsContainer = section.querySelector('.tm-dots');
+    const leftArrow = section.querySelector('.tm-arrow-left');
+    const rightArrow = section.querySelector('.tm-arrow-right');
+
+    if (!track || !container || !cards.length) return;
 
     let currentIndex = 0;
-    let autoScrollInterval;
-    
+    let autoScrollTimer = null;
+    let touchStartX = 0;
+    let touchDeltaX = 0;
 
-    // 1. Check screen logic ki kitne cards dikhane hain
     function getVisibleCount() {
-        if (window.innerWidth > 992) return 3;
-        if (window.innerWidth > 650) return 2;
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
         return 1;
     }
 
-    // 2. Max index bound fix taake extra drag na ho ya blank space na aaye
     function getMaxIndex() {
         return Math.max(0, cards.length - getVisibleCount());
     }
 
-   function moveSlider() {
-    const cardWidth = cards[0].offsetWidth;
-    const gap = 30;
-
-    track.style.transition = "transform 0.5s ease";
-    track.style.transform =
-        `translateX(-${currentIndex * (cardWidth + gap)}px)`;
-
-    if (currentIndex >= originalCards.length) {
-        setTimeout(() => {
-            track.style.transition = "none";
-            currentIndex = 0;
-            track.style.transform = "translateX(0)";
-        }, 500);
+    function getCardStep() {
+        const card = cards[0];
+        if (!card) return 0;
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        return card.offsetWidth + gap;
     }
-}
 
-        const originalCards = Array.from(cards);
+    function updateArrows() {
+        const maxIndex = getMaxIndex();
+        if (leftArrow) leftArrow.disabled = currentIndex <= 0;
+        if (rightArrow) rightArrow.disabled = currentIndex >= maxIndex;
+    }
 
-originalCards.forEach(card => {
-    const clone = card.cloneNode(true);
-    track.appendChild(clone);
-});
-    // 6. Navigation Control Actions
-function nextSlide() {
-    currentIndex++;
-    moveSlider();
-}
+    function buildDots() {
+        if (!dotsContainer) return;
 
-   function previousSlide() {
-    if (currentIndex <= 0) {
-        currentIndex = originalCards.length;
-        track.style.transition = "none";
+        const pages = getMaxIndex() + 1;
+        dotsContainer.innerHTML = '';
 
-        const cardWidth = cards[0].offsetWidth;
-        track.style.transform =
-            `translateX(-${currentIndex * (cardWidth + 30)}px)`;
+        for (let i = 0; i < pages; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'tm-dot' + (i === currentIndex ? ' active-dot' : '');
+            dot.setAttribute('role', 'button');
+            dot.setAttribute('aria-label', 'Go to review slide ' + (i + 1));
+            dot.addEventListener('click', function (event) {
+                event.preventDefault();
+                goTo(i);
+                resetAutoScroll();
+            });
+            dotsContainer.appendChild(dot);
+        }
+    }
 
-        setTimeout(() => {
-            track.style.transition = "transform 0.5s ease";
-            currentIndex--;
-            moveSlider();
-        }, 50);
-    } else {
-        currentIndex--;
+    function updateDots() {
+        if (!dotsContainer) return;
+        dotsContainer.querySelectorAll('.tm-dot').forEach(function (dot, index) {
+            dot.classList.toggle('active-dot', index === currentIndex);
+        });
+    }
+
+    function moveSlider() {
+        const maxIndex = getMaxIndex();
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+        track.style.transform = 'translateX(-' + (currentIndex * getCardStep()) + 'px)';
+        updateDots();
+        updateArrows();
+    }
+
+    function goTo(index) {
+        const maxIndex = getMaxIndex();
+        currentIndex = Math.min(Math.max(index, 0), maxIndex);
         moveSlider();
     }
-}
-    // 7. Click bindings directly mapping manual actions
+
+    function nextSlide() {
+        goTo(currentIndex + 1);
+    }
+
+    function previousSlide() {
+        goTo(currentIndex - 1);
+    }
+
+    function resetAutoScroll() {
+        clearInterval(autoScrollTimer);
+        if (getMaxIndex() === 0) return;
+        autoScrollTimer = setInterval(function () {
+            if (currentIndex >= getMaxIndex()) goTo(0);
+            else nextSlide();
+        }, 6000);
+    }
+
     if (rightArrow) {
-        rightArrow.addEventListener("click", function(e) {
-            e.preventDefault();
+        rightArrow.addEventListener('click', function (event) {
+            event.preventDefault();
             nextSlide();
             resetAutoScroll();
         });
     }
 
     if (leftArrow) {
-        leftArrow.addEventListener("click", function(e) {
-            e.preventDefault();
+        leftArrow.addEventListener('click', function (event) {
+            event.preventDefault();
             previousSlide();
             resetAutoScroll();
         });
     }
 
-    dots.forEach((dot, index) => {
-        dot.addEventListener("click", function (e) {
-            e.preventDefault();
-            const visibleCount = getVisibleCount();
-            const centerOffset = Math.floor(visibleCount / 2);
-            
-            // Map index target seamlessly back tracking view index position 
-            let targetIndex = index - centerOffset;
-            const maxIndex = getMaxIndex();
+    container.addEventListener('touchstart', function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+        touchDeltaX = 0;
+    }, { passive: true });
 
-            // Safety limit clamp bounds check
-            if (targetIndex < 0) targetIndex = 0;
-            if (targetIndex > maxIndex) targetIndex = maxIndex;
+    container.addEventListener('touchmove', function (event) {
+        touchDeltaX = event.changedTouches[0].screenX - touchStartX;
+    }, { passive: true });
 
-            currentIndex = targetIndex;
-            moveSlider();
+    container.addEventListener('touchend', function () {
+        if (Math.abs(touchDeltaX) < 40) return;
+        if (touchDeltaX < 0) nextSlide();
+        else previousSlide();
+        resetAutoScroll();
+    });
+
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            buildDots();
+            goTo(currentIndex);
             resetAutoScroll();
-        });
+        }, 120);
     });
 
-    // 8. Auto Scroller System (Fixed Interval Stacking Bug)
-    function startAutoScroll() {
-        autoScrollInterval = setInterval(nextSlide, 5000);
-    }
-
-    function resetAutoScroll() {
-        clearInterval(autoScrollInterval);
-        startAutoScroll(); // Fresh neat cycle recreate
-    }
-
-    // 9. Resize recalculations wrapper handler safely
-    let resizeTimeout;
-    window.addEventListener("resize", () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            currentIndex = 0; 
-            moveSlider();
-        }, 100);
-    });
-
-    // Initialize execution run
+    buildDots();
     moveSlider();
-    startAutoScroll();
-});
+    resetAutoScroll();
+}

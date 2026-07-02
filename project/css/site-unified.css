@@ -187,6 +187,50 @@
     text-align: left;
 }
 
+.neoxweb-site.service-page .end-to-end-business {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 1rem !important;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.neoxweb-site.service-page .end-to-end-business .svc-vertical-item {
+    min-height: 100%;
+}
+
+.neoxweb-site.service-page .end-to-end-business .svc-vertical-item__icon {
+    max-height: 180px;
+    width: 100%;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .neoxweb-site.service-page .end-to-end-business {
+        gap: 0.85rem !important;
+        margin: 0 !important;
+    }
+
+    .neoxweb-site.service-page .end-to-end-business .svc-vertical-item__icon {
+        max-height: 160px;
+    }
+
+    .neoxweb-site.service-page .end-to-end-business .svc-vertical-item > div:not(.svc-vertical-item__icon) {
+        padding: 0.85rem 0.9rem 0.9rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .neoxweb-site.service-page .end-to-end-business {
+        grid-template-columns: 1fr !important;
+    }
+
+    .neoxweb-site.service-page .end-to-end-business .svc-vertical-item__icon {
+        max-height: 140px;
+    }
+}
+
 .neoxweb-site.service-page.ui-ref-theme .svc-vertical-item:nth-child(n+7) {
     display: none !important;
 }
@@ -727,15 +771,36 @@ body.neoxweb-site.case-study-page:has(.cs-portfolio-grid) .cs-container {
     gap: 0;
     align-items: stretch;
     text-decoration: none;
-    border-radius: 12px;
+    border-radius: 18px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: border-color 0.2s ease;
+    background: rgba(12, 34, 48, 0.95);
+    border: 1px solid rgba(45, 212, 191, 0.18);
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
 }
 
 .neoxweb-site .nx-stack-card:hover {
-    border-color: rgba(45, 212, 191, 0.28);
+    border-color: rgba(45, 212, 191, 0.35);
+    transform: translateY(-1px);
+}
+
+.neoxweb-site .nx-stack-card__body {
+    padding: 0.9rem 1rem 1rem;
+    text-align: left;
+    color: #f8fafc;
+}
+
+.neoxweb-site .nx-stack-card__body h3 {
+    color: #fff;
+}
+
+.neoxweb-site .nx-stack-card__body p {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.neoxweb-site .nx-stack-card__link {
+    color: var(--ui-green);
+    font-weight: 700;
 }
 
 .neoxweb-site .nx-stack-card > .visual-art-wrap {

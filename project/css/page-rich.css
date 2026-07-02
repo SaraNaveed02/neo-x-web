@@ -148,5 +148,49 @@
 .need-dev > div {
     width: min(800px, 100%);
 }
+
+/* Service page text size and centered sections */
+body.service-page main > section:not(.svc-banner-hero) .container {
+    margin-inline: auto;
+    max-width: min(1100px, 100%);
+}
+
+body.service-page main > section:not(.svc-banner-hero) .section-header {
+    text-align: center;
+}
+
+body.service-page main > section:not(.svc-banner-hero) .section-header h2,
+body.service-page main > section:not(.svc-banner-hero) .section-header .section-desc,
+body.service-page main > section:not(.svc-banner-hero) .nx-portfolio-row__copy h3,
+body.service-page main > section:not(.svc-banner-hero) .nx-portfolio-row__copy p,
+body.service-page main > section:not(.svc-banner-hero) .need-dev p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.service-page main > section:not(.svc-banner-hero) .section-header h2 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+body.service-page main > section:not(.svc-banner-hero) .section-header .section-desc,
+body.service-page main > section:not(.svc-banner-hero) .nx-portfolio-row__copy p,
+body.service-page main > section:not(.svc-banner-hero) .need-dev p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 36rem;
+}
+
+body.service-page main > section:not(.svc-banner-hero) .nx-portfolio-row__copy h3 {
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+}
+
+body.service-page main > section:not(.svc-banner-hero) .nx-portfolio-row {
+    justify-content: center;
+}
+
+body.service-page main > section:not(.svc-banner-hero) .nx-portfolio-row__copy {
+    text-align: center;
+}
+
 body.auth-page .auth-rich-main { background: var(--cs-bg, #050508); }
 body.auth-page .auth-layout { min-height: auto; }
