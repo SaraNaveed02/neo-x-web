@@ -10,9 +10,9 @@
 
 @media (max-width: 900px) {
 
-    html.mobile-view #navbar-container,
+    body.nx-app-body #navbar-container,
 
-    html.mobile-view #mainNavbar {
+    body.nx-app-body #mainNavbar {
 
         display: none !important;
 

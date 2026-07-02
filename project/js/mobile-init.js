@@ -58,9 +58,5 @@
         }, 8000);
     }
 
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadMobileShell, { timeout: 2000 });
-    } else {
-        setTimeout(loadMobileShell, 800);
-    }
+    loadMobileShell();
 })();

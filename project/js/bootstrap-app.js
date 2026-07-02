@@ -355,6 +355,7 @@ const NexuraApp = (() => {
 
     function injectPageLoader() {
         if (document.getElementById('nxPageLoader')) return;
+        if (document.readyState === 'complete') return;
 
         const loader = document.createElement('div');
         loader.id = 'nxPageLoader';
@@ -365,9 +366,12 @@ const NexuraApp = (() => {
         `;
         document.body.prepend(loader);
 
-        window.addEventListener('load', () => {
+        function hideLoader() {
             setTimeout(() => loader.classList.add('hidden'), 350);
-        });
+        }
+
+        window.addEventListener('load', hideLoader, { once: true });
+        setTimeout(() => loader.classList.add('hidden'), 5000);
     }
 
     function toast(message, type = 'success') {
