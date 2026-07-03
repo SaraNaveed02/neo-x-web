@@ -300,7 +300,7 @@ body.unified-site {
 
 /* CTA band */
 .ui-cta-band {
-    background: linear-gradient(135deg, #071526 0%, #0f2744 50%, #0b3dcc 100%);
+    background: linear-gradient(135deg, green 0%, black 100%);
 }
 
 .ui-cta-band h2 { font-weight: 800; letter-spacing: -0.02em; }

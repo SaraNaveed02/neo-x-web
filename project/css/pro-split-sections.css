@@ -136,31 +136,32 @@
 .capability-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:25px;
+    gap:20px; /* 25px se kam */
+    margin:20px;
 }
 
 .capability-card{
     display:flex;
     align-items:center;
-    gap:22px;
-    padding:30px;
+    gap:16px;
+    padding:20px; /* 30px → 20px */
     background:#181b1f;
     border:1px solid #2d3137;
-    border-radius:18px;
+    border-radius:14px;
     transition:.35s ease;
 }
 
 .capability-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
     border-color:#31d67b;
-    box-shadow:0 18px 40px rgba(0,0,0,.35);
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
 }
 
 .capability-icon{
-    width:80px;
-    height:80px;
-    min-width:80px;
-    border-radius:16px;
+    width:60px;      /* 80px → 60px */
+    height:60px;
+    min-width:60px;
+    border-radius:12px;
     background:#23352b;
     display:flex;
     align-items:center;
@@ -168,23 +169,22 @@
 }
 
 .capability-icon img{
-    width:42px;
-    height:42px;
+    width:32px;      /* 42px → 32px */
+    height:32px;
 }
 
 .capability-content h3{
     color:#fff;
-    font-size:24px;
-    margin-bottom:10px;
+    font-size:20px; /* 24px → 20px */
+    margin-bottom:6px;
 }
 
 .capability-content p{
     color:#c7c7c7;
-    font-size:16px;
-    line-height:1.7;
+    font-size:15px; /* 16px → 15px */
+    line-height:1.6;
     margin:0;
 }
-
 
 .workflow-section{
     padding:90px 0;
@@ -192,6 +192,7 @@
 }
 
 .workflow-heading{
+    text-align:center;
     margin-bottom:60px;
 }
 
@@ -199,82 +200,130 @@
     color:#2ed573;
     text-transform:uppercase;
     font-weight:600;
-    letter-spacing:1px;
+    letter-spacing:2px;
 }
 
 .workflow-heading h2{
     color:#fff;
-    font-size:42px;
+    font-size:clamp(28px,4vw,40px);
     margin-top:15px;
 }
 
-.workflow-wrapper{
-    position:relative;
+/*================ GRID ================*/
+
+.workflow-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
 }
 
-.workflow-wrapper::before{
-    content:"";
-    position:absolute;
-    left:35px;
-    top:0;
-    width:3px;
-    height:100%;
-    background:#2ed573;
-}
+/*================ CARD ================*/
 
 .workflow-item{
     display:flex;
     align-items:flex-start;
-    gap:30px;
-    margin-bottom:45px;
+    gap:20px;
+    background:#181b20;
+    border:1px solid #2b3137;
+    border-radius:18px;
+    padding:28px;
+    transition:.35s;
     position:relative;
+    overflow:hidden;
+}
+
+.workflow-item::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:5px;
+    height:100%;
+    background:#2ed573;
+}
+
+.workflow-item:hover{
+    transform:translateY(-8px);
+    border-color:#2ed573;
+    box-shadow:0 18px 40px rgba(0,0,0,.35);
 }
 
 .workflow-circle{
-    width:70px;
-    height:70px;
-    min-width:70px;
+    width:60px;
+    height:60px;
+    min-width:60px;
     border-radius:50%;
     background:#2ed573;
     color:#fff;
-    font-size:24px;
-    font-weight:700;
     display:flex;
     align-items:center;
     justify-content:center;
-    z-index:2;
+    font-size:20px;
+    font-weight:700;
 }
 
 .workflow-content{
-    background:#181b20;
-    border:1px solid #2b3137;
-    border-radius:16px;
-    padding:25px;
-    width:100%;
-    transition:.3s;
-}
-
-.workflow-content:hover{
-    transform:translateX(10px);
-    border-color:#2ed573;
-    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    flex:1;
 }
 
 .workflow-content h3{
     color:#fff;
+    font-size:22px;
     margin-bottom:12px;
-    font-size:26px;
 }
 
 .workflow-content p{
-    color:#c7c7c7;
-    line-height:1.7;
+    color:#b8bcc5;
+    line-height:1.8;
+    margin:0;
 }
 
-.workflow-item:last-child{
-    margin-bottom:0;
+/*================ TABLET ================*/
+
+@media(max-width:991px){
+
+    .workflow-grid{
+        grid-template-columns:1fr;
+    }
+
+    .workflow-heading{
+        margin-bottom:40px;
+    }
+
 }
 
+/*================ MOBILE ================*/
+
+@media(max-width:576px){
+
+    .workflow-section{
+        padding:70px 0;
+    }
+
+    .workflow-item{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:22px;
+        gap:18px;
+    }
+
+    .workflow-circle{
+        width:55px;
+        height:55px;
+        min-width:55px;
+        font-size:18px;
+    }
+
+    .workflow-content h3{
+        font-size:20px;
+    }
+
+    .workflow-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+}
 .section-modernization{
     width:100%;
     padding:20px ;
@@ -482,6 +531,7 @@
     grid-template-columns:repeat(2,1fr);
     gap:30px;
     margin-top:60px;
+    margin:20px;
     }
     
     .dev-benefit-card{
@@ -549,6 +599,36 @@
     .dev-benefit-card li::marker{
     
     color:#20d56b;
+    }
+
+@media (max-width: 900px) {
+    .dev-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 40px;
+    }
+
+    .dev-benefit-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .dev-benefit-card {
+        padding: 1.5rem;
+    }
+
+    .dev-benefit-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .dev-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+}
     
     }
     .workflow-line{
@@ -1035,7 +1115,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--text-muted);
+    color: #4ade80;
     margin-bottom: 12px;
   }
   .section-title {
@@ -1236,13 +1316,13 @@
     color: #fff;
   }
   .engage-card p {
-    color: var(--text-muted);
+    color: #4ade80;
     font-size: 14px;
     line-height: 1.6;
     margin: 0 0 24px 0;
   }
   .engage-card a {
-    color: var(--accent-green);
+    color: #4ade80;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -1453,7 +1533,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--text-muted);
+    color: #4ade80;
     margin-bottom: 12px;
   }
   .section-title {
@@ -1684,7 +1764,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--text-muted);
+    color: #4ade80;
     margin-bottom: 12px;
   }
   .section-title {
@@ -1754,8 +1834,8 @@
   }
   .engage-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
   .engage-card h4 { margin: 0 0 12px 0; font-size: 1.3rem; }
-  .engage-card p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin: 0 0 24px 0; }
-  .engage-card a { color: var(--accent-green); text-decoration: none; font-weight: 600; font-size: 14px; }
+  .engage-card p { color: #4ade80; font-size: 14px; line-height: 1.6; margin: 0 0 24px 0; }
+  .engage-card a { color: #4ade80; text-decoration: none; font-weight: 600; font-size: 14px; }
   
   /* --- Section: FAQ (Details) --- */
   .faq-accordion-wrapper { max-width: 720px; margin: 0 auto; }
@@ -2487,6 +2567,39 @@
 .neoxweb-site .web-why-card .checklist {
     grid-column: 1 !important;
     text-align: left !important;
+}
+
+body.neoxweb-site.service-page .web-why-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+}
+
+body.neoxweb-site.service-page .web-why-card {
+    display: block !important;
+    grid-template-columns: none !important;
+    padding: 2.25rem !important;
+    border-radius: var(--radius) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.neoxweb-site.service-page .web-why-card::after {
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    body.neoxweb-site.service-page .web-why-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    body.neoxweb-site.service-page .web-why-card {
+        padding: 1.5rem !important;
+    }
+
+    body.neoxweb-site.service-page .web-why-card::after {
+        display: none !important;
+    }
 }
 
 /* Capability cards */

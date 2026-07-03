@@ -452,7 +452,7 @@ body.unified-site .nx-fixed-login { display: none; }
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--ui-blue);
+    color: #4ade80;
     margin-bottom: 0.75rem;
 }
 
@@ -747,6 +747,7 @@ body.unified-site .nx-fixed-login { display: none; }
     text-align: center;
     max-width: 720px;
     margin: 0 auto;
+
 }
 
 .ui-tech-panel.active { display: block; }
@@ -801,7 +802,7 @@ body.unified-site .nx-fixed-login { display: none; }
 
 /* ── CTA band ── */
 .ui-cta-band {
-    background: linear-gradient(135deg, var(--ui-navy) 0%, #1e3a5f 100%);
+    background: linear-gradient(135deg, green 0%,green  100%);
     color: #fff;
     padding: clamp(2.75rem, 5vw, 4rem) 0;
     text-align: center;
@@ -872,7 +873,7 @@ body.unified-site .nx-fixed-login { display: none; }
 .ui-process-card .step {
     font-size: 0.7rem;
     font-weight: 700;
-    color: var(--ui-blue);
+    color:  #4ade80;
     letter-spacing: 0.08em;
     margin-bottom: 0.5rem;
 }
@@ -986,7 +987,7 @@ body.unified-site .nx-fixed-login { display: none; }
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--ui-blue);
+    color: #4ade80;
 }
 
 .ui-resource-card h4 {
@@ -1007,6 +1008,7 @@ body.unified-site .nx-fixed-login { display: none; }
 
 @media (max-width: 560px) {
     .ui-resources-grid { grid-template-columns: 1fr; }
+    
 }
 
 /* ── Contact form ── */
@@ -1161,4 +1163,126 @@ body.unified-site .nx-fixed-login { display: none; }
 .ui-fade-up.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+/* mobile html */
+
+/* Section Base Styling */
+.tech-section {
+    padding: 80px 20px;
+    background-color: transparent; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.tech-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-text-center {
+    text-align: center;
+}
+
+/* Badge & Title */
+.tech-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #4ade80; /* Updated to pure green */
+    background-color: rgba(74, 222, 128, 0.1); /* Soft green transparent background */
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.tech-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #ffffff; /* Dark theme ke liye text white kiya hai */
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
+}
+
+.tech-title strong {
+    font-weight: 700;
+    color: #4ade80; /* "success" ya strong text ko green highlight diya hai */
+}
+
+/* Tabs Navigation Bar */
+.tech-tabs-wrapper {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.tech-tab-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Dark theme borders */
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #9ca3af; /* Clean muted text color */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tech-tab-btn:hover {
+    color: #4ade80; /* Hover karne par green text */
+    border-color: rgba(74, 222, 128, 0.4); /* Hover par subtle green border */
+}
+
+/* Active Tab State */
+.tech-tab-btn.active {
+    background-color: #4ade80; /* Active button background complete green */
+    color: #000000; /* Contrast ke liye black text */
+    border-color: #4ade80;
+}
+
+/* Content Panels */
+.tech-content-panel {
+    display: block;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    padding: 30px 35px;
+    background: rgba(255, 255, 255, 0.03); 
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Panel hover par halka sa green active glow block border */
+.tech-content-panel:hover {
+    transform: translateY(-2px);
+    border-color: rgba(74, 222, 128, 0.25);
+}
+
+.tech-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tech-panel-heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff; 
+    margin-top: 0;
+    margin-bottom: 0.75rem; 
+    letter-spacing: -0.5px;
+}
+
+.tech-panel-desc {
+    font-size: 1.05rem;
+    color: #9ca3af; 
+    line-height: 1.6;
+    margin: 0;
 }
