@@ -385,7 +385,17 @@ img.nx-photo,
 }
 
 .neoxweb-site .footer-uni__top {
-    padding-block: clamp(2.5rem, 5vw, 4rem);
+    padding-top: 15px !important;
+
+}
+
+.neoxweb-site main .section-padding:last-child {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+.neoxweb-site .site-footer--pro .footer-uni__bar {
+    border-top: none !important;
 }
 
 .neoxweb-site .footer-uni__col a {

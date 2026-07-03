@@ -1271,8 +1271,8 @@ body.nav-open { overflow: hidden; }
         width: min(88vw, 380px);
         height: 100vh;
         height: 100dvh;
-        background: rgba(10, 10, 10, 0.98);
-        backdrop-filter: blur(20px);
+        background: #ffffff !important;
+        backdrop-filter: none !important;
         z-index: 10001;
         padding: 22px;
         transition: right 0.3s ease;
@@ -1280,7 +1280,7 @@ body.nav-open { overflow: hidden; }
         align-items: stretch;
         justify-content: flex-start;
         overflow-y: auto;
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
         grid-column: 1 / -1;
         grid-row: 1;
         pointer-events: none;
@@ -1295,13 +1295,66 @@ body.nav-open { overflow: hidden; }
 
     .navbar__drawer-head,
     .navbar__drawer-footer,
-    .navbar__drawer-search { display: block; }
+    .navbar__drawer-search {
+        display: block;
+    }
 
     .navbar__drawer-head {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 18px;
+    }
+
+    .navbar,
+    #mainNavbar,
+    header.navbar,
+    .navbar__inner,
+    .nav-container,
+    .navbar .nav-menu {
+        background: #fff !important;
+        background-color: #fff !important;
+        color: #111 !important;
+    }
+
+    .navbar {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .header {
+        background: #fff !important;
+        background-color: #fff !important;
+    }
+
+    /* Logo */
+    .navbar__logo-img--nx {
+        background: transparent !important;
+        mix-blend-mode: normal !important;
+        filter: none !important;
+    }
+
+    /* Hamburger icon */
+    .hamburger span {
+        background: #111 !important;
+    }
+
+    /* Navigation links */
+    .nav-links a {
+        color: #111 !important;
+    }
+
+    .navbar__logo,
+    .navbar__logo--nx {
+        background: transparent !important;
+    }
+
+    .navbar__logo-img--nx {
+        height: 38px;
+        width: auto;
+        object-fit: contain;
+        mix-blend-mode: normal !important;
+        filter: none !important;
     }
 
     .navbar__drawer-logo.navbar__logo-img--nx {
@@ -1316,21 +1369,24 @@ body.nav-open { overflow: hidden; }
     .navbar__drawer-close {
         background: none;
         border: none;
-        color: #fff;
+        color: #111111;
         font-size: 26px;
         cursor: pointer;
         line-height: 1;
     }
 
-    .navbar__drawer-search { margin-bottom: 16px; position: relative; }
+    .navbar__drawer-search {
+        margin-bottom: 16px;
+        position: relative;
+    }
 
     .navbar__drawer-search .nav-search input {
         width: 100%;
         padding: 12px 14px 12px 40px;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(15, 23, 42, 0.06);
+        border: 1px solid rgba(15, 23, 42, 0.12);
         border-radius: 999px;
-        color: #fff;
+        color: #111111;
         font-size: 15px;
         font-family: inherit;
         outline: none;
@@ -1372,8 +1428,14 @@ body.nav-open { overflow: hidden; }
         border-radius: 12px;
     }
 
-    .navbar .mega-dropdown-trigger.active .mega-menu { display: block; }
-    .navbar .mega-container { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .navbar .mega-dropdown-trigger.active .mega-menu {
+        display: block;
+    }
+
+    .navbar .mega-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
 
     .navbar__drawer-footer {
         margin-top: auto;
@@ -1417,9 +1479,13 @@ body.nav-open { overflow: hidden; }
     }
 
     .nav-search-toggle,
-    .navbar .hamburger { display: flex; }
+    .navbar .hamburger {
+        display: flex;
+    }
 
-    .nav-search-toggle { display: none !important; }
+    .nav-search-toggle {
+        display: none !important;
+    }
 }
 
 @media (min-width: 901px) {
@@ -1429,7 +1495,9 @@ body.nav-open { overflow: hidden; }
         font-weight: 600;
     }
 
-    .nx-fixed-login { display: none !important; }
+    .nx-fixed-login {
+        display: none !important;
+    }
 }
 
 .nx-fixed-login {
