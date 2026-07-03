@@ -85,7 +85,7 @@ async function loadContactPageSettings() {
     try {
         const result = await NexuraAPI.getPublicSettings();
         const settings = result.data || {};
-        const email = settings.contact_email || 'info@neoxweb.com';
+        const email = settings.contact_email || 'supportneoxweb@gmail.com';
         const numbers = getWhatsAppNumbers(settings);
 
         if (emailEl) {

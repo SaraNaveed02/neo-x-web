@@ -25,7 +25,7 @@ const reps = [
     ['+92 308 4858836', '+92 314 066 6734'],
     ['923084858836', '923140666734'],
     ['+923084858836', '+923140666734'],
-    ['supportneoxweb@gmail.com', 'info@neoxweb.com'],
+    ['supportneoxweb@gmail.com', 'supportneoxweb@gmail.com'],
     ['WhatsApp: 0308 4858836', 'WhatsApp: 0314 066 6734'],
 ];
 

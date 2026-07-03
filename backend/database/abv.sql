@@ -228,7 +228,7 @@ ON DUPLICATE KEY UPDATE role = 'admin', is_active = 1;
 INSERT INTO settings (setting_key, setting_value, setting_group) VALUES
 ('site_name', 'NEOXWEB', 'general'),
 ('site_tagline', 'Web Development & Digital Marketing Pakistan', 'general'),
-('contact_email', 'info@neoxweb.com', 'contact'),
+('contact_email', 'supportneoxweb@gmail.com', 'contact'),
 ('contact_phone', '+92 314 066 6734', 'contact'),
 ('contact_address', 'Lahore, Pakistan', 'contact'),
 ('contact_response_time', 'Within 1 business day', 'contact'),

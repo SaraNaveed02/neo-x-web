@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                  ON DUPLICATE KEY UPDATE password = VALUES(password), role = 'admin', is_active = 1"
             )->execute([$adminHash]);
 
-            $pdo->exec("UPDATE settings SET setting_value = 'info@neoxweb.com' WHERE setting_key = 'contact_email'");
+            $pdo->exec("UPDATE settings SET setting_value = 'supportneoxweb@gmail.com' WHERE setting_key = 'contact_email'");
             $pdo->exec("UPDATE settings SET setting_value = '+92 314 066 6734' WHERE setting_key = 'contact_phone'");
             $pdo->exec("UPDATE settings SET setting_value = '923140666734' WHERE setting_key = 'whatsapp_number'");
 

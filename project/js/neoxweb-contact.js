@@ -2,7 +2,7 @@
  * NEOXWEB — contact info (email + WhatsApp)
  */
 (function () {
-    const EMAIL = 'info@neoxweb.com';
+    const EMAIL = 'supportneoxweb@gmail.com';
     const NUMBERS = [
         { display: '+92 314 066 6734', e164: '923140666734' }
     ];
