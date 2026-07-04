@@ -182,7 +182,7 @@ const NexuraApp = (() => {
         header.className = 'nx-app-header ui-mobile-header';
         header.innerHTML = `
             <a href="${base}index.html" class="ui-mobile-logo navbar__logo--nx" aria-label="NEOXWEB Home">
-                <img src="${base}assets/images/neoxweb/logo-nx-mark.jpg" alt="NEOXWEB" class="navbar__logo-img navbar__logo-img--nx" width="160" height="64" loading="eager">
+                <img src="${base}assets/images/neoxweb/main-logo.jpeg?v=2" alt="NEOXWEB" class="navbar__logo-img navbar__logo-img--nx" width="160" height="64" loading="eager">
             </a>
             <div class="ui-mobile-header__actions">
                 <a href="${base}contact.html" class="ui-mobile-icon-btn ui-mobile-icon-btn--login" aria-label="Contact">
