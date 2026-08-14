@@ -189,34 +189,472 @@
     }
 }
 
-@media (max-width: 900px) {
-    .neoxweb-site .hero-section--premium,
-    .neoxweb-site .hero-section--premium-home,
-    .neoxweb-site .web-hero.hero-section--premium {
-        min-height: min(82vh, 720px);
+/* =========================================================
+   NEOXWEB HERO — FINAL RESPONSIVE FIX
+   Tablet + Mobile
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   768px - 1024px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    body.neoxweb-site .hero-section--pro,
+    body.nx-app-body .hero-section--pro,
+    body.neoxweb-site.home-page .hero-section--pro {
+
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        min-height: 650px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
     }
 
-    .neoxweb-site .hero-section--premium .hero-tech-bg img,
-    .neoxweb-site .hero-section--premium-home .hero-tech-bg img,
-    .neoxweb-site .web-hero.hero-section--premium .hero-tech-bg img {
-        min-width: 112%;
-        object-position: top right;
-        opacity: 0.65;
-        transform: scale(1.02);
+
+    /* =====================================================
+       BACKGROUND CONTAINER
+    ===================================================== */
+
+    body.neoxweb-site .hero-section--pro .hero-tech-bg {
+
+        position: absolute !important;
+
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        margin: 0 !important;
+
+        overflow: hidden !important;
+
+        z-index: 1 !important;
     }
 
-    .neoxweb-site .hero-section--premium .hero-bg-overlay,
-    .neoxweb-site .hero-section--premium-home .hero-bg-overlay {
+
+    /* =====================================================
+       BACKGROUND IMAGE
+    ===================================================== */
+
+    body.neoxweb-site .hero-section--pro .hero-tech-bg img {
+
+        position: absolute !important;
+
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: none !important;
+
+        height: 100% !important;
+
+        object-fit: cover !important;
+        object-position: center center !important;
+
+        transform: none !important;
+
+        opacity: 0.65 !important;
+
+        display: block !important;
+    }
+
+
+    /* =====================================================
+       OVERLAY
+    ===================================================== */
+
+    body.neoxweb-site .hero-section--pro .hero-bg-overlay {
+
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        z-index: 2 !important;
+
         background:
-            linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.45) 100%);
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.94) 0%,
+                rgba(0, 0, 0, 0.80) 40%,
+                rgba(0, 0, 0, 0.45) 75%,
+                rgba(0, 0, 0, 0.25) 100%
+            ) !important;
     }
 
-    .neoxweb-site .hero-section--premium .hero-grid--bg,
-    .neoxweb-site .hero-section--premium-home .hero-grid--bg,
-    .neoxweb-site .hero-section--premium .nx-page-hero__inner {
-        min-height: min(82vh, 720px);
-        align-items: end;
-        padding-bottom: clamp(2rem, 5vw, 3rem);
+
+    /* =====================================================
+       PARTICLES
+    ===================================================== */
+
+    body.neoxweb-site .hero-section--pro .hero-particles-canvas,
+    body.neoxweb-site .hero-section--pro .nx-page-hero__particles {
+
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        z-index: 3 !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       CONTENT CONTAINER
+       IMPORTANT: global .container ko override
+    ===================================================== */
+
+    body.neoxweb-site .hero-section--pro > .container,
+    body.neoxweb-site .hero-section--pro > .ui-container,
+    body.neoxweb-site .hero-section--pro > .cs-container,
+    body.neoxweb-site .hero-section--pro > .web-hero-grid,
+    body.neoxweb-site .hero-section--pro .hero-grid--bg,
+    body.neoxweb-site .hero-section--pro .container.hero-grid--bg,
+    body.neoxweb-site .hero-section--pro .nx-page-hero__inner {
+
+        position: relative !important;
+
+        z-index: 5 !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+        justify-content: center !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        min-height: 650px !important;
+
+        margin: 0 !important;
+
+        padding-top: 90px !important;
+        padding-right: 55px !important;
+        padding-bottom: 55px !important;
+        padding-left: 55px !important;
+
+        box-sizing: border-box !important;
+
+        text-align: left !important;
+
+        justify-items: unset !important;
+
+        gap: 0 !important;
+    }
+
+
+    /* =====================================================
+       HERO COPY
+    ===================================================== */
+
+    body.neoxweb-site .hero-section--pro .hero-copy {
+
+        width: 100% !important;
+
+        max-width: 590px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-align: left !important;
+    }
+
+
+    /* =====================================================
+       HEADING
+    ===================================================== */
+
+    body.neoxweb-site .hero-section--pro .hero-copy h1,
+    body.neoxweb-site .hero-section--pro .hero-title,
+    body.neoxweb-site .hero-section--pro .nx-page-hero__inner h1 {
+
+        width: 100% !important;
+
+        max-width: 590px !important;
+
+        margin: 0 !important;
+
+        font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
+
+        line-height: 1.12 !important;
+
+        text-align: left !important;
+
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+    }
+
+
+    /* =====================================================
+       PARAGRAPH
+    ===================================================== */
+
+    body.neoxweb-site .hero-section--pro .hero-text,
+    body.neoxweb-site .hero-section--pro .nx-page-hero__lead,
+    body.neoxweb-site .hero-section--pro .web-hero-lead {
+
+        width: 100% !important;
+
+        max-width: 550px !important;
+
+        margin: 1.2rem 0 0 !important;
+
+        font-size: 1rem !important;
+
+        line-height: 1.65 !important;
+
+        text-align: left !important;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    body.neoxweb-site .hero-section--pro .hero-actions,
+    body.neoxweb-site .hero-section--pro .web-hero-actions,
+    body.neoxweb-site .hero-section--pro .svc-banner-hero__actions {
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        flex-wrap: wrap !important;
+
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        width: auto !important;
+
+        gap: 1rem !important;
+
+        margin-top: 1.7rem !important;
+    }
+
+
+    body.neoxweb-site .hero-section--pro .hero-actions a,
+    body.neoxweb-site .hero-section--pro .web-hero-actions a {
+
+        width: auto !important;
+
+        min-width: 170px !important;
+
+        max-width: max-content !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   0 - 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+    body.neoxweb-site .hero-section--pro,
+    body.nx-app-body .hero-section--pro {
+
+        width: 100% !important;
+
+        min-height: 620px !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* Background */
+
+    body.neoxweb-site .hero-section--pro .hero-tech-bg {
+
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+
+    body.neoxweb-site .hero-section--pro .hero-tech-bg img {
+
+        width: 100% !important;
+        min-width: 100% !important;
+
+        height: 100% !important;
+
+        object-fit: cover !important;
+
+        object-position: center !important;
+
+        transform: none !important;
+
+        opacity: 0.5 !important;
+    }
+
+
+    /* Darker mobile overlay */
+
+    body.neoxweb-site .hero-section--pro .hero-bg-overlay {
+
+        inset: 0 !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.88) 0%,
+                rgba(0, 0, 0, 0.68) 55%,
+                rgba(0, 0, 0, 0.88) 100%
+            ) !important;
+    }
+
+
+    /* Content */
+
+    body.neoxweb-site .hero-section--pro > .container,
+    body.neoxweb-site .hero-section--pro .hero-grid--bg,
+    body.neoxweb-site .hero-section--pro .container.hero-grid--bg,
+    body.neoxweb-site .hero-section--pro .nx-page-hero__inner {
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+        justify-content: center !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        min-height: 620px !important;
+
+        margin: 0 !important;
+
+        padding-top: 90px !important;
+        padding-right: 20px !important;
+        padding-bottom: 40px !important;
+        padding-left: 20px !important;
+
+        box-sizing: border-box !important;
+
+        text-align: left !important;
+    }
+
+
+    /* Copy */
+
+    body.neoxweb-site .hero-section--pro .hero-copy {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        text-align: left !important;
+    }
+
+
+    /* Heading */
+
+    body.neoxweb-site .hero-section--pro .hero-copy h1,
+    body.neoxweb-site .hero-section--pro .hero-title,
+    body.neoxweb-site .hero-section--pro .nx-page-hero__inner h1 {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        font-size: clamp(2rem, 9vw, 2.7rem) !important;
+
+        line-height: 1.12 !important;
+
+        text-align: left !important;
+
+        word-break: normal !important;
+    }
+
+
+    /* Paragraph */
+
+    body.neoxweb-site .hero-section--pro .hero-text,
+    body.neoxweb-site .hero-section--pro .nx-page-hero__lead,
+    body.neoxweb-site .hero-section--pro .web-hero-lead {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin-top: 1rem !important;
+
+        font-size: 0.95rem !important;
+
+        line-height: 1.6 !important;
+
+        text-align: left !important;
+    }
+
+
+    /* Buttons */
+
+    body.neoxweb-site .hero-section--pro .hero-actions,
+    body.neoxweb-site .hero-section--pro .web-hero-actions,
+    body.neoxweb-site .hero-section--pro .svc-banner-hero__actions {
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        width: 100% !important;
+
+        gap: 0.8rem !important;
+
+        margin-top: 1.5rem !important;
+    }
+
+
+    body.neoxweb-site .hero-section--pro .hero-actions a,
+    body.neoxweb-site .hero-section--pro .web-hero-actions a {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        text-align: center !important;
+
+        justify-content: center !important;
     }
 }
 
