@@ -568,7 +568,8 @@
 }
 
 /* Universal row: copy left (col 1), media right (col 2) */
-.neoxweb-site .nx-portfolio-row,
+.neoxweb-site .nx-pro-split,
+/* Base styles - Grid layout for Desktop & Tablets */
 .neoxweb-site .nx-pro-split,
 .neoxweb-site .nx-auto-row,
 .neoxweb-site .nx-service-row,
@@ -576,38 +577,95 @@
 .neoxweb-site .nx-page-hero-row,
 .neoxweb-site .nx-team-card,
 .neoxweb-site .neox-service-cards > .neox-service-card {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) !important;
-    gap: clamp(0.85rem, 2vw, 1.35rem) !important;
-    align-items: center !important;
-    padding: clamp(0.75rem, 1.8vw, 1.15rem) 0 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
-    text-align: left !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Desktop par side-by-side */
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: center;
+    padding: clamp(0.75rem, 1.8vw, 1.15rem) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    text-align: left;
 }
 
 .neoxweb-site .nx-portfolio-row:last-child,
 .neoxweb-site .nx-auto-row:last-child,
 .neoxweb-site .neox-service-cards > .neox-service-card:last-child {
-    border-bottom: none !important;
+    border-bottom: none;
 }
 
-/* LEFT column — text */
-.neoxweb-site .nx-portfolio-row__copy,
-.neoxweb-site .nx-pro-split__body,
-.neoxweb-site .neox-service-card__body,
-.neoxweb-site .svc-showcase-card figcaption,
-.neoxweb-site .nx-team-card__body,
-.neoxweb-site .contact-hero-inner {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    text-align: left !important;
-    order: unset !important;
-    padding: 0 !important;
-    max-width: none !important;
+/* Image formatting */
+.neoxweb-site .nx-pro-split__media img,
+.neoxweb-site .nx-team-card__img img,
+.neoxweb-site .svc-showcase-card__img img,
+.neoxweb-site .contact-hero-row__media img,
+.neoxweb-site .web-hero-visual-icon img,
+.neoxweb-site .visual-art-wrap img,
+.neoxweb-site .cs-card__media img,
+.neoxweb-site .ui-cs-card__media img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
 
-/* RIGHT column — image */
+/* Media frame styling */
 .neoxweb-site .nx-portfolio-row__media,
+.neoxweb-site .nx-portfolio-row__media--full,
+.neoxweb-site .nx-pro-split__media,
+.neoxweb-site .nx-team-card__img,
+.neoxweb-site .svc-showcase-card__img,
+.neoxweb-site .contact-hero-row__media,
+.neoxweb-site .web-hero-visual,
+.neoxweb-site .cs-card__media,
+.neoxweb-site .ui-cs-card__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 0.75rem;
+    width: 100%;
+}
+
+/* List spacing improvement */
+.nx-pro-split__list span strong {
+    display: block; /* Heading aur subheading ko clean separate line mein karega */
+    color: #fff;
+}
+
+/* MOBILE RESPONSIVE FIX (Screens under 768px) */
+@media (max-width: 768px) {
+    .neoxweb-site .nx-pro-split,
+    .neoxweb-site .nx-auto-row,
+    .neoxweb-site .nx-service-row,
+    .neoxweb-site .contact-hero-row,
+    .neoxweb-site .nx-page-hero-row,
+    .neoxweb-site .nx-team-card,
+    .neoxweb-site .neox-service-cards > .neox-service-card {
+        grid-template-columns: 1fr !important; /* Mobile par 1 single column */
+        gap: 1.5rem;
+    }
+
+    .neoxweb-site .nx-portfolio-row__copy,
+    .neoxweb-site .neox-service-card__body,
+    .neoxweb-site .svc-showcase-card figcaption,
+    .neoxweb-site .nx-team-card__body,
+    .neoxweb-site .contact-hero-inner {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+
+    .neoxweb-site .nx-portfolio-row__media,
+    .neoxweb-site .nx-pro-split__media,
+    .neoxweb-site .neox-service-card__media,
+    .neoxweb-site .svc-showcase-card__img,
+    .neoxweb-site .nx-team-card__img,
+    .neoxweb-site .contact-hero-row__media {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+}
+/* RIGHT column — image */
+/* .neoxweb-site .nx-portfolio-row__media,
 .neoxweb-site .nx-pro-split__media,
 .neoxweb-site .neox-service-card__media,
 .neoxweb-site .svc-showcase-card__img,
@@ -631,7 +689,7 @@
     align-items: center !important;
     justify-content: center !important;
     position: relative !important;
-}
+} */
 
 .neoxweb-site .neox-service-card__badge {
     position: static !important;

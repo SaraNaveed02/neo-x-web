@@ -656,6 +656,19 @@
 
         justify-content: center !important;
     }
+
+
+    body.neoxweb-site .hero-section--pro .hero-actions {
+        width: auto !important;
+        margin-left: -20px !important; /* match container padding-left */
+        padding-left: 10px !important; /* keep inner spacing for button text */
+        padding-right: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    body.neoxweb-site .hero-section--pro .hero-actions a {
+        box-sizing: border-box !important;
+    }
 }
 
 @media (max-width: 480px) {

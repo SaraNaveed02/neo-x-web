@@ -110,6 +110,16 @@
         background 0.28s ease,
         color 0.28s ease;
 }
+.neoxweb-site .nx-pro-split__body .btn-neoxweb.btn-large,
+.neoxweb-site .btn-neoxweb {
+    padding: 0.5rem 1.25rem !important; /* Button ki height aur width control karega */
+    font-size: 0.875rem !important;     /* Text size chota karega (14px) */
+    min-height: auto !important;        /* Extra height remove karega */
+    width: fit-content !important;      /* Extra wide hone se rokega */
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 .neoxweb-site .btn-hero-primary,
 .neoxweb-site .btn-neoxweb,
@@ -311,45 +321,95 @@
 }
 
 /* ── Pro split & portfolio rows ── */
-.neoxweb-site .nx-pro-split__media,
-.neoxweb-site .nx-portfolio-row__media,
-.neoxweb-site .hero-image-frame {
-    border-radius: var(--pa-radius-xl);
-    border: 1px solid var(--pa-border);
-    box-shadow: var(--pa-shadow-md);
-    transition: transform 0.45s var(--pa-ease), box-shadow 0.45s var(--pa-ease);
+/* ==========================================
+   DESKTOP & TABLET LAYOUT (Min-width: 769px)
+   ========================================== */
+@media (min-width: 769px) {
+    .neoxweb-site .nx-pro-split {
+        display: grid !important;
+        grid-template-columns: 1.2fr 0.8fr !important; /* Left: Text, Right: Image */
+        gap: clamp(1.5rem, 3vw, 2.5rem) !important;
+        align-items: center !important;
+    }
+
+    .neoxweb-site .nx-pro-split__body {
+        grid-column: 1 !important;
+        width: 100% !important;
+    }
+
+    .neoxweb-site .nx-pro-split__media {
+        grid-column: 2 !important;
+        width: 100% !important;
+    }
+    .neoxweb-site .nx-pro-split__media {
+        display: flex !important; /* Ya block/grid jo bhi aapka main container styling ho */
+    }
 }
 
-.neoxweb-site .nx-pro-split:hover .nx-pro-split__media,
-.neoxweb-site .nx-portfolio-row:hover .nx-portfolio-row__media,
-.neoxweb-site .hero-visual-art:hover .hero-image-frame {
+/* ==========================================
+   MOBILE LAYOUT FIX (Max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+   
+    .neoxweb-site .nx-pro-split {
+        display: flex !important;
+        flex-direction: column !important; /* Single column stacking */
+        gap: 1.5rem !important;
+        width: 100% !important;
+    }
+
+    .neoxweb-site .nx-pro-split__body,
+    .neoxweb-site .nx-pro-split__media {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Text formatting fix inside list */
+    .neoxweb-site .nx-pro-split__list li span strong {
+        display: block !important; /* Heading & subheading separation */
+        margin-bottom: 0.25rem;
+    }
+     .neoxweb-site .nx-pro-split__media {
+        display: none !important;
+    }
+}
+
+/* ==========================================
+   IMAGE & CARDS STYLING (Universal)
+   ========================================== */
+.neoxweb-site .nx-pro-split__media {
+    border-radius: var(--pa-radius-xl, 0.75rem);
+    border: 1px solid var(--pa-border, rgba(255, 255, 255, 0.1));
+    box-shadow: var(--pa-shadow-md, 0 4px 12px rgba(0, 0, 0, 0.15));
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.neoxweb-site .nx-pro-split__media img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.neoxweb-site .nx-pro-split:hover .nx-pro-split__media {
     transform: translateY(-4px);
-    box-shadow: var(--pa-shadow-lg);
-}
-
-.neoxweb-site .nx-portfolio-row {
-    border-bottom-color: rgba(255, 255, 255, 0.05);
-    transition: background 0.3s ease;
-    border-radius: var(--pa-radius-lg);
-    padding-inline: clamp(0.5rem, 2vw, 1rem);
-}
-
-.neoxweb-site .nx-portfolio-row:hover {
-    background: rgba(255, 255, 255, 0.02);
+    box-shadow: var(--pa-shadow-lg, 0 8px 24px rgba(0, 0, 0, 0.25));
 }
 
 .neoxweb-site .nx-pro-split__list li {
     padding: 0.85rem 1rem;
-    border-radius: var(--pa-radius-md);
+    border-radius: var(--pa-radius-md, 0.5rem);
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: border-color 0.25s ease, background 0.25s ease;
-}
-
-.neoxweb-site .nx-pro-split__list li:hover {
+    margin-bottom: 0.75rem;
+}.neoxweb-site .nx-pro-split__list li:hover {
     border-color: rgba(74, 222, 128, 0.18);
     background: rgba(74, 222, 128, 0.04);
 }
+
 
 /* ── Portfolio / case study cards ── */
 .neoxweb-site .cs-portfolio-card,

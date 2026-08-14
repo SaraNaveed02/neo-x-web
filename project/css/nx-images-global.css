@@ -200,7 +200,7 @@
 
     .neoxweb-site .hero-section--pro .hero-actions .btn-hero-primary,
     .neoxweb-site .hero-section--pro .hero-actions .btn-hero-outline {
-        width: 100% !important;
+        /* width: 100% !important; */
         min-width: 0 !important;
     }
 

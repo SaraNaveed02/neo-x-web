@@ -20,10 +20,13 @@
   --font-body: "Inter", sans-serif;
   --transition: 250ms ease;
   --cursor-size: 28px;
---nx-container: min(1440px, calc(100% - 3rem)); /* Root mein change kar dein */}
+--nx-container: min(1440px, calc(100% - 3rem)); 
+
+/* Root mein change kar dein */}
 
 html {
   scroll-behavior: smooth;
+  
 }
 
 *,
@@ -41,8 +44,15 @@ body {
     linear-gradient(180deg, #0a0a0a 0%, #101010 100%);
   overflow-x: hidden;
 }
-.web-contanier{
-  max-width: 2000px;
+body.web-container,
+.web-container,
+body.web-container {
+  width: 100% !important;
+  max-width: 1500px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
 }
 img {
   display: block;
