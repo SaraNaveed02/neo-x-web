@@ -24,11 +24,11 @@
   ========================================= */
   
   .footer-uni__grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 4rem;
-    width: 100%;
-  }
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 4rem;
+  width: 100%;
+}
   
   
   /* =========================================
@@ -340,27 +340,28 @@
   @media (max-width: 740px) {
   
     .footer-uni__top {
-      width: calc(100% - 2rem);
-      padding-top: 2.5rem;
-    }
-  
-    .footer-uni__grid {
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-    }
-  
-  
-    .footer-uni__brand {
-      grid-column: 1 / -1;
-    }
-  
-    .footer-uni__col {
-      align-items: flex-start;
-    }
-  
-    .footer-uni__description {
-      max-width: 100%;
-    }
+    width: calc(100% - 2rem);
+    padding-top: 2.5rem;
+  }
+
+  .footer-uni__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-uni__brand {
+    grid-column: 1 / -1;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-uni__col {
+    align-items: flex-start;
+  }
+
+  .footer-uni__description {
+    max-width: 100%;
+  }
   }
   
   
@@ -371,23 +372,86 @@
   @media (max-width: 480px) {
   
     .footer-uni__grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-  
-    .footer-uni__brand {
-      grid-column: auto;
-    }
-  
-    .footer-uni__col {
-      align-items: flex-start;
-    }
-  
-    .footer-uni__top {
-      width: calc(100% - 1.5rem);
-    }
-  
-    .footer-uni__copy {
-      width: calc(100% - 1.5rem);
-    }
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
+
+  .footer-uni__brand {
+    grid-column: auto;
+  }
+
+  .footer-uni__col {
+    align-items: flex-start;
+  }
+
+  .footer-uni__top {
+    width: calc(100% - 1.5rem);
+  }
+
+  .footer-uni__copy {
+    width: calc(100% - 1.5rem);
+  }
+  }
+  /* =========================================
+   TABLET - 2 COLUMNS
+   477px to 768px
+========================================= */
+
+@media (min-width: 477px) and (max-width: 768px) {
+
+  .footer-uni__grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 2rem !important;
+    width: 100% !important;
+  }
+
+  /* Brand full width */
+  .footer-uni__brand {
+    grid-column: 1 / -1 !important;
+  }
+
+  .footer-uni__col {
+    grid-column: auto !important;
+    width: 100% !important;
+  }
+}
+
+
+/* =========================================
+   MOBILE - 1 COLUMN
+   476px and below
+========================================= */
+
+@media (max-width: 476px) {
+
+  .footer-uni__grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .footer-uni__brand {
+    grid-column: auto !important;
+  }
+
+  .footer-uni__col {
+    grid-column: auto !important;
+    width: 100% !important;
+  }
+}
+
+
+/* =========================================
+   DESKTOP - 4 COLUMNS
+   769px+
+========================================= */
+
+@media (min-width: 769px) {
+
+  .footer-uni__grid {
+    display: grid !important;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr !important;
+    gap: 4rem !important;
+  }
+}

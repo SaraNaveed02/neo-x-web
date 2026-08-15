@@ -163,7 +163,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 1.75rem;
+    margin-top: 3.8rem !important;
     justify-content: flex-start;
 }
 
@@ -676,6 +676,16 @@
     .neoxweb-site .hero-section--premium-home .hero-particles-canvas {
         opacity: 0.6;
     }
+    .nx-page-hero.hero-section--pro,
+  .hero-section--pro,
+  body.nx-app-body .hero-section--pro {
+    min-height: auto !important; /* Fixed height ke bajaye auto room de taake text na kate */
+    max-height: 140vh !important;
+    height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 2rem !important;
+    margin-top: 0 !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

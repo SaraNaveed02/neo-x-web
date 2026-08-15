@@ -747,6 +747,7 @@ body.neoxweb-site.case-study-page:has(.cs-portfolio-grid) .cs-container {
 
 .neoxweb-site .web-hero-actions {
     justify-content: flex-start;
+    margin-top: 2.2rem;
 }
 
 /* Service page sections — all text left */

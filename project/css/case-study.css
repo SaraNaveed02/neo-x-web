@@ -1029,6 +1029,18 @@ body.case-study-page.has-dock .cs-hero__visual {
     border: 1px solid rgba(79, 70, 229, 0.18);
     color: var(--cs-accent);
 }
+@media (max-width: 768px) {
+    .cs-hero {
+        padding-top: 0.15rem !important;
+    }
+
+    .cs-index-hero {
+        padding-top: 0.15rem !important;
+    }
+
+    /* pull hero visual up so it sits directly under nav */
+    .cs-hero__visual { margin-top: -0.5rem; }
+}
 
 /* ═══════════════════════════════════════════════════════════
    Premium light agency — portfolio index & shared UI

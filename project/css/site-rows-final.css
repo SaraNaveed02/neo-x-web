@@ -864,6 +864,7 @@
 .neoxweb-site .svc-banner-hero__inner > .svc-banner-hero__lead,
 .neoxweb-site .svc-banner-hero__inner > .svc-banner-hero__actions {
     grid-column: 1 !important;
+    margin-top: 4.5rem !important;
 }
 
 .neoxweb-site .svc-banner-hero__inner > .nx-portfolio-row__media {
