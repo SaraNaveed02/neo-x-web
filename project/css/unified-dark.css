@@ -200,6 +200,7 @@ body.ui-ref-theme .ui-mobile-nav a {
     border: none;
     z-index: 0;
     isolation: isolate;
+    margin-top: 0.5rem;
 }
 
 .ui-btn-getstarted::before {
@@ -657,7 +658,7 @@ body.ui-ref-theme .web-hero h1 { color: #fff !important; }
 
 body.ui-ref-theme .section-tag {
     background: rgba(45, 212, 191, 0.12) !important;
-    color: var(--ui-ref-teal) !important;
+    color: #4ade80 !important;
 }
 
 body.ui-ref-theme .value-card,

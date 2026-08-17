@@ -731,6 +731,9 @@ grid-template-columns: repeat(3, 1fr);
     background: white;
     color: var(--accent);
     font-weight: 700;
+        text-align: center !important;
+        padding-top:.6rem
+
 }
 
 .web-cta-card .btn-white:hover {

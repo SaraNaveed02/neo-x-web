@@ -27,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/web-container-fix.css">
 <link rel="stylesheet" href="css/service-page.css">
         <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
@@ -66,11 +67,11 @@
     <script defer src="js/hero-particles.js"></script>
     <script src="js/row-layout.js" defer></script>
 </head>
-<body class="neoxweb-site service-page nx-advanced-page">
+<body class="web-container neoxweb-site service-page nx-advanced-page">
     <div id="navbar-container"></div>
     <main>
 
-        <section class="web-hero hero-section--neoxweb hero-section--pro hero-section--premium">
+        <section class=" web-hero hero-section--neoxweb hero-section--pro hero-section--premium">
             <div class="container web-hero-grid">
                 <div class="web-hero-copy fade-up">
                     <span class="section-tag">App Modernization</span>
@@ -82,25 +83,14 @@
                     </div>
                     <div class="web-hero-metrics"><div class="web-metric"><i class="fas fa-check-circle" aria-hidden="true"></i> Legacy migration</div><div class="web-metric"><i class="fas fa-check-circle" aria-hidden="true"></i> Cloud-native rebuild</div><div class="web-metric"><i class="fas fa-check-circle" aria-hidden="true"></i> Zero-downtime cutover</div></div>
                 </div>
-                <div class="web-hero-visual fade-up delay-1">
+                <!-- <div class="web-hero-visual fade-up delay-1">
                     <div class="web-hero-visual-icon" aria-hidden="true"><img src="assets/images/neoxweb/web-dev.jpg" alt="" class="visual-art visual-art--hero nx-photo" loading="lazy"></div>
                     <div class="web-hero-float-card web-hero-float-card--top"><i class="fas fa-bolt" aria-hidden="true"></i> Modern Stack</div><div class="web-hero-float-card web-hero-float-card--bottom"><i class="fas fa-percentage" aria-hidden="true"></i> Cloud Ready</div>
-                </div>
+                </div> -->
             </div>
         </section>
-        <section class="web-tech-strip app-modernization" aria-label="Technologies">
-            <div class="container">
-              <span class="label">Built with</span>
-              
-              <span class="web-tech-pill"><i class="fab fa-aws" aria-hidden="true"></i> AWS</span>
-              <span class="web-tech-pill"><i class="fab fa-docker" aria-hidden="true"></i> Containers</span>
-              <span class="web-tech-pill"><i class="fas fa-code-branch" aria-hidden="true"></i> Microservices</span>
-              <span class="web-tech-pill"><i class="fas fa-database" aria-hidden="true"></i> Kafka</span>
-              <span class="web-tech-pill"><i class="fas fa-cloud" aria-hidden="true"></i> Serverless</span>
-              <span class="web-tech-pill"><i class="fas fa-shield-alt" aria-hidden="true"></i> Security</span>
-            </div>
-          </section>
-        <section class="section-padding" style="margin: 10px; ">
+      
+        <section class="section-padding">
             <div class="container section-header text-center">
                 <span class="section-tag">What we deliver</span>
                 <h2>Proven modernization strategies for every legacy system.</h2>
@@ -112,14 +102,18 @@
                     <div class="service-panel-icon"><img src="assets/icons/cloud.svg" alt="" width="30" height="30"></div>
                     <h3>Rehost (Lift & Shift)</h3>
                     <p>Move existing applications to cloud with minimal changes for fastest migration.</p>
-                    <div class="list-bullet"><span></span>Cloud migration planning</div><div class="list-bullet"><span></span>Infrastructure provisioning</div><div class="list-bullet"><span></span>Cutover orchestration</div>
+                    <div class="list-bullet"><span></span>Cloud migration planning</div>
+                    <div class="list-bullet"><span></span>Infrastructure provisioning</div>
+                    <div class="list-bullet"><span></span>Cutover orchestration</div>
                 </article>
                 <article class="service-panel tilt-card fade-up delay-1">
                     <span class="service-panel-num">02</span>
                     <div class="service-panel-icon service-panel-icon--green"><img src="assets/icons/api.svg" alt="" width="30" height="30"></div>
                     <h3>Refactor (Re-architect)</h3>
                     <p>Restructure for cloud-native architecture and microservices.</p>
-                    <div class="list-bullet"><span></span>Service decomposition</div><div class="list-bullet"><span></span>API gateway design</div><div class="list-bullet"><span></span>Database modernization</div>
+                    <div class="list-bullet"><span></span>Service decomposition</div>
+                    <div class="list-bullet"><span></span>API gateway design</div>
+                    <div class="list-bullet"><span></span>Database modernization</div>
                 </article>
                 <article class="service-panel tilt-card fade-up delay-2">
                     <span class="service-panel-num">03</span>
@@ -349,68 +343,198 @@
         </section>
     </main>
     
-<footer class="site-footer site-footer--pro" role="contentinfo">
-    <div class="footer-uni__top container">
-        <div class="footer-uni__bar container">
-        <a href="index.html" class="footer-uni__mark" aria-label="NEOXWEB Home">
-            <img src="assets/images/neoxweb/logo-nx-mark.jpg" alt="" width="40" height="40" loading="lazy">
-        </a>
-        <div class="footer-uni__office">
-            <strong class="footer-uni__country">PAK</strong>
-            <div>
-                <span>Pakistan</span>
-                <a href="tel:+923140666734">+92 314 066 6734</a>
-            </div>
+<div class="footer-uni__top container">
+
+    <div class="footer-uni__grid">
+  
+      <!-- COLUMN 1 -->
+      <div class="footer-uni__brand">
+  
+        <div class="footer-uni__company-block">
+          <a href="index.html" class="footer-uni__mark" aria-label="NEOXWEB Home">
+            <img src="assets/images/neoxweb/logo-nx-mark.jpg"
+                 alt="NEOXWEB"
+                 width="40"
+                 height="40">
+          </a>
+  
+          <strong class="footer-uni__country">NEOXWEB</strong>
         </div>
+  
+        <p class="footer-uni__description">
+          We build modern digital solutions that help businesses grow,
+          connect and succeed.
+        </p>
+  
         <div class="footer-uni__mail">
-            <span>Mail us at</span>
-            <a href="mailto:supportneoxweb@gmail.com">supportneoxweb@gmail.com</a>
+          <span>Mail us at</span>
+          <a href="mailto:supportneoxweb@gmail.com">
+            supportneoxweb@gmail.com
+          </a>
         </div>
+  
         <div class="footer-uni__social-block">
-            <span>Get Connected</span>
-            <div class="footer-uni__social">
-                <a href="https://wa.me/923140666734" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-                <a href="mailto:supportneoxweb@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
- <a href="https://www.instagram.com/neoxweb_solutions?igsh=MW5uZTdlOHU1ZHFjZw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/company/neoxweb-solutions/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>            </div>
+          <span>Get Connected</span>
+  
+          <div class="footer-uni__social">
+  
+            <a href="https://wa.me/923140666734"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+  
+            <a href="mailto:supportneoxweb@gmail.com"
+               aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+  
+            <a href="https://www.facebook.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+  
+            <a href="https://www.instagram.com/neoxweb_solutions"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+  
+            <a href="https://www.linkedin.com/company/neoxweb-solutions/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+  
+          </div>
         </div>
+  
+      </div>
+  
+  
+      <!-- COLUMN 2 -->
+      <nav class="footer-uni__col" aria-label="Core Services">
+  
+        <h3>Core Services</h3>
+  
+        <a href="web.html">
+          Web Development
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="mobile.html">
+          Mobile App Development
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="ecommerce-strategy.html">
+          E-Commerce Strategy
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="case-study-ppc.html">
+          PPC Advertising
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="case-study-seo.html">
+          SEO Services
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="development.html">
+          Custom Software Development
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+      </nav>
+  
+  
+      <!-- COLUMN 3 -->
+      <nav class="footer-uni__col" aria-label="Technology">
+  
+        <h3>Technology</h3>
+  
+        <a href="cloud.html">
+          Cloud Engineering
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="saas-platforms.html">
+          SaaS Platforms
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="software-engineering.html">
+          Software Engineering
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="product-design.html">
+          UI/UX Design
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="ai.html">
+          AI Solutions
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+      </nav>
+  
+  
+      <!-- COLUMN 4 -->
+      <nav class="footer-uni__col" aria-label="Company">
+  
+        <h3>Company</h3>
+  
+        <a href="about.html">
+          About
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="portfolio.html">
+          Case Studies
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="blog.html">
+          Blogs
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="team.html">
+          Our Team
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="contact.html">
+          Contact
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+        <a href="privacy-policy.html">
+          Privacy Policy
+          <i class="fas fa-chevron-right"></i>
+        </a>
+  
+      </nav>
+  
     </div>
-        <h2 class="footer-uni__title">Let's Grow Your <strong>Brand</strong></h2>
-        <div class="footer-uni__grid">
-            <nav class="footer-uni__col" aria-label="Core Services">
-                <h3>Core Services</h3>
-                <a href="web.html">Web Development <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="mobile.html">Mobile App Development <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="">E-Commerce Strategy <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="case-study-ppc.html">PPC Advertising <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="case-study-seo.html">SEO Services <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="development.html">Custom Software Development <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-            </nav>
-            <nav class="footer-uni__col" aria-label="Technology">
-                <h3>Technology</h3>
-                <a href="cloud.html">Cloud Engineering <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="saas-platforms.html">SaaS Platforms <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="software-engineering.html">Software Engineering <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="product-design.html">UI/UX Design <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="ai.html">AI Solutions <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-            </nav>
-            <nav class="footer-uni__col" aria-label="Company">
-                <h3>Company</h3>
-                <a href="about.html">About <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="portfolio.html">Case Studies <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="blog.html">Blogs <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="team.html">Our Team <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="contact.html">Contact <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                <a href="privacy-policy.html">Privacy Policy <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-            </nav>
-        </div>
-    </div>
- 
-    <div class="footer-uni__copy container">
-        <p>&copy; 2026 NEOXWEB. All rights reserved. · <a href="privacy-policy.html">Privacy Policy</a></p>
-    </div>
-</footer>
+  
+  </div>
+  
+  <div class="footer-uni__copy container">
+    <p>
+      &copy; 2026 NEOXWEB. All rights reserved.
+      · <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
+  </div>
 <div class="custom-cursor" id="customCursor"></div>
     <script defer src="js/utils.js"></script>
     <script defer src="js/main.js"></script>

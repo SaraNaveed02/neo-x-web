@@ -149,6 +149,8 @@
     max-width: 34rem;
     margin: 1.15rem 0 0;
     text-align: left;
+    margin-top: 0 !important;
+    
 }
 
 .neoxweb-site .hero-section--premium .section-tag,

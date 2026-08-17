@@ -1,0 +1,407 @@
+/**
+ * WEB CONTAINER FIX
+ * Proper styling for .web-container body class
+ * Ensures consistent layout, max-width, and section visibility
+ */
+
+/* ── Main container styles ── */
+body.web-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+
+.web-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* Ensure all containers inside have proper width */
+.web-container .container {
+    width: 100% !important;
+    max-width: min(1280px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: clamp(1rem, 2.5vw, 2rem) !important;
+    padding-right: clamp(1rem, 2.5vw, 2rem) !important;
+    box-sizing: border-box !important;
+}
+
+.container {
+    width: 100% !important;
+    max-width: min(1280px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: clamp(1rem, 2.5vw, 2rem) !important;
+    padding-right: clamp(1rem, 2.5vw, 2rem) !important;
+    box-sizing: border-box !important;
+}
+
+/* ── Section padding and visibility ── */
+.web-container section {
+    width: 100% !important;
+    display: block !important;
+    overflow: visible !important;
+}
+
+.web-container .section-padding {
+    padding-top: clamp(3rem, 6vw, 5rem) !important;
+    padding-bottom: clamp(3rem, 6vw, 5rem) !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.web-container .section-pad {
+    padding-top: clamp(2.5rem, 5vw, 4rem) !important;
+    padding-bottom: clamp(2.5rem, 5vw, 4rem) !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* ── Fix gray background sections ── */
+.web-container .gray-bg,
+.web-container section.gray-bg {
+    background-color: rgba(15, 15, 15, 0.5);
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.3), rgba(15, 15, 15, 0.6));
+    margin: 0 !important;
+}
+
+/* ── Gallery grid display ── */
+.web-container .qa-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.qa-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.web-container .qa-gallery-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.web-container .qa-gallery-card:hover {
+    border-color: rgba(74, 222, 128, 0.3);
+    background: rgba(74, 222, 128, 0.05);
+}
+
+.web-container .qa-gallery-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.web-container .qa-gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.web-container .qa-gallery-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.web-container .qa-gallery-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.web-container .qa-gallery-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted, rgba(255, 255, 255, 0.6));
+}
+
+/* ── Service grid display ── */
+.web-container .service-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.service-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.web-container .service-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.web-container .service-panel:hover {
+    border-color: rgba(74, 222, 128, 0.3);
+    background: rgba(74, 222, 128, 0.05);
+}
+
+/* ── Why grid display ── */
+.web-container .web-why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.web-container .web-why-card {
+    padding: 2rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.web-container .web-why-card:hover {
+    border-color: rgba(74, 222, 128, 0.3);
+    background: rgba(74, 222, 128, 0.05);
+}
+
+/* ── Workflow section ── */
+.web-container .workflow-section {
+    width: 100%;
+}
+
+.web-container .workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.web-container .workflow-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.web-container .workflow-circle {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(16, 185, 129, 0.1));
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/* ── Capability grid ── */
+.web-container .capability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.web-container .capability-card {
+    padding: 2rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    gap: 1.5rem;
+}
+
+.web-container .capability-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+}
+
+/* ── Cases section ── */
+.web-container .web-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.web-container .web-case-card {
+    padding: 1.75rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.web-container .web-case-card:hover {
+    border-color: rgba(74, 222, 128, 0.3);
+    background: rgba(74, 222, 128, 0.05);
+}
+
+/* ── Stats band ── */
+.web-container .web-stats-band {
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.8));
+    border-top: 1px solid rgba(74, 222, 128, 0.2);
+    border-bottom: 1px solid rgba(74, 222, 128, 0.2);
+    width: 100%;
+    padding: 2.5rem 0;
+}
+
+.web-container .web-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.web-container .web-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.web-container .web-stat-item strong {
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+.web-container .web-stat-item span {
+    font-size: 0.9rem;
+    color: var(--muted, rgba(255, 255, 255, 0.6));
+}
+
+/* ── CTA section ── */
+.web-container .web-cta {
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.web-container .web-cta-card {
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.15), rgba(16, 185, 129, 0.1));
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    border-radius: 16px;
+    padding: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.web-container .web-cta-card h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin: 0;
+}
+
+.web-container .web-cta-card p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* ── Main and section display ── */
+.web-container main {
+    width: 100%;
+    display: block;
+    overflow-x: hidden;
+}
+
+/* ── Responsive adjustments ── */
+@media (max-width: 1024px) {
+    .web-container .qa-gallery-grid,
+    .web-container .service-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .web-container .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .web-container .section-header {
+        text-align: center;
+    }
+
+    .web-container .web-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .web-container .qa-gallery-grid,
+    .web-container .service-grid,
+    .web-container .web-why-grid,
+    .web-container .workflow-grid,
+    .web-container .capability-grid,
+    .web-container .web-cases {
+        grid-template-columns: 1fr !important;
+    }
+
+    .web-container .capability-card,
+    .web-container .web-why-card {
+        flex-direction: column;
+    }
+
+    .web-container .workflow-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .web-container .web-stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .web-container .web-stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .web-container .section-padding {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
