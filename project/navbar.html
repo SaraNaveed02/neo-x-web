@@ -1,157 +1,590 @@
-<div class="web-container">
-    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
-<header class="navbar header   " style="background-color: white;" id="mainNavbar" role="banner">
-    <div class="navbar__inner">
-        <div class="nav-container">
-            <a href="index.html" class="footer-logo navbar__logo navbar__logo--nx" aria-label="NEOXWEB Home">
-                <img src="assets/images/neoxweb/main-logo.jpeg" alt="NEOXWEB" class="navbar__logo-img navbar__logo-img--nx" width="106" height="40" loading="eager">
+<div class="nxv-shell">
+
+    <div class="nxv-overlay" id="navBackdrop" aria-hidden="true"></div>
+
+    <header class="nxv-header"     style="background: #ffffff !important;"
+ id="mainNavbar" role="banner">
+
+        <div class="nxv-header-inner">
+
+            <!-- LOGO -->
+            <a href="index.html"
+               class="nxv-brand"
+               aria-label="NEOXWEB Home">
+
+                <img
+                    src="assets/images/neoxweb/main-logo.jpeg"
+                    alt="NEOXWEB"
+                    class="nxv-brand-image"
+                    width="106"
+                    height="40"
+                    loading="eager"
+                >
+
             </a>
 
-            <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
-                <div class="navbar__drawer-head">
-                    <img src="assets/images/neoxweb/main-logo.jpeg" alt="NEOXWEB" class="navbar__drawer-logo navbar__logo-img--nx" width="110" height="44" loading="eager">
-                    <button type="button" class="navbar__drawer-close" id="navDrawerClose" aria-label="Close menu">&times;</button>
+
+            <!-- NAVIGATION -->
+            <nav
+                class="nxv-navigation"
+                id="navMenu"
+                aria-label="Main navigation"
+            >
+
+                <!-- MOBILE HEADER -->
+                <div class="nxv-mobile-top">
+
+                    <img
+                        src="assets/images/neoxweb/main-logo.jpeg"
+                        alt="NEOXWEB"
+                        class="nxv-mobile-logo"
+                        width="110"
+                        height="44"
+                        loading="eager"
+                    >
+
+                    <button
+                        type="button"
+                        class="nxv-close"
+                        id="navDrawerClose"
+                        aria-label="Close menu"
+                    >
+                        &times;
+                    </button>
+
                 </div>
-                <div class="navbar__drawer-search">
-                    <div class="nav-search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                        <input type="search" id="navSearchInputMobile" placeholder="Search services..." autocomplete="off" aria-label="Search">
+
+
+                <!-- MOBILE SEARCH -->
+                <div class="nxv-mobile-search-area">
+
+                    <div class="nxv-search-box nxv-search-box-mobile">
+
+                        <i
+                            class="fas fa-search"
+                            aria-hidden="true"
+                        ></i>
+
+                        <input
+                            type="search"
+                            id="navSearchInputMobile"
+                            placeholder="Search services..."
+                            autocomplete="off"
+                            aria-label="Search"
+                        >
+
                     </div>
-                    <div class="nav-search-results" id="navSearchResultsMobile" hidden></div>
+
+                    <div
+                        class="nxv-search-results"
+                        id="navSearchResultsMobile"
+                        hidden
+                    ></div>
+
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" data-nav="index">Home</a></li>
-                    <li><a href="about.html" data-nav="about">About</a></li>
-                    <li class="mega-dropdown-trigger" id="megaTrigger">
-                        <a href="services.html" data-nav="services">Services <i class="fas fa-chevron-down nav-chevron" aria-hidden="true"></i></a>
-                        <div class="mega-menu mega-menu--services mega-menu--unified">
-                            <div class="mega-services-wrap">
-                                <div class="mega-services">
-                                    <nav class="mega-services__cats" aria-label="Service categories">
-                                        <button type="button" class="mega-services__cat is-active" data-panel="engineering">Software Engineering</button>
-                                        <button type="button" class="mega-services__cat" data-panel="design">Design &amp; Digital Experience</button>
-                                        <button type="button" class="mega-services__cat" data-panel="cloud">Cloud Engineering</button>
-                                        <button type="button" class="mega-services__cat" data-panel="data">Data &amp; Analytics</button>
-                                        <button type="button" class="mega-services__cat" data-panel="consulting">IT Consulting &amp; Advisory</button>
-                                        <button type="button" class="mega-services__cat" data-panel="strategy">Digital Strategy</button>
-                                        <div class="mega-services__divider" aria-hidden="true"></div>
-                                        <p class="mega-services__label">Leading Tech Offerings For</p>
-                                        <a href="it-consulting.html" class="mega-services__sub">Startup Consulting</a>
-                                        <a href="services.html" class="mega-services__sub">SMB Consulting</a>
-                                        <a href="it-consulting.html" class="mega-services__sub">Enterprise Consulting</a>
-                                    </nav>
-                                    <div class="mega-services__panels">
-                                        <div class="mega-services__panel is-active" data-panel="engineering">
-                                            <a href="web.html">Website Development <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="development.html">Web App Development <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="mobile.html">Mobile App Development <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="application-modernization.html">Application Modernization <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="software-engineering.html">Blockchain Development <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="software-engineering.html">Custom Software Development <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="saas-platforms.html">SaaS Development <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="ecommerce-strategy.html">E-Commerce Development <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="testing-qa.html">Testing &amp; Quality Assurance <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                        </div>
-                                        <div class="mega-services__panel" data-panel="design">
-                                            <a href="product-design.html">UI/UX &amp; Product Design <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="graphic-design.html">Graphic Design &amp; Branding <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="video-editing.html">Video Editing &amp; Reels <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="social-media-marketing.html">Social Media Marketing <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="web.html">Website Design &amp; Development <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                        </div>
-                                        <div class="mega-services__panel" data-panel="cloud">
-                                            <a href="cloud.html">Cloud Engineering <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="saas-platforms.html">SaaS Platforms <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="application-modernization.html">Application Modernization <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="software-engineering.html">Enterprise Software <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                        </div>
-                                        <div class="mega-services__panel" data-panel="data">
-                                            <a href="case-study-seo.html">SEO &amp; Growth <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="ai.html">AI Solutions &amp; Automation <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="data-analytics.html">Business Intelligence <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                        </div>
-                                        <div class="mega-services__panel" data-panel="consulting">
-                                            <a href="it-consulting.html">IT Consulting &amp; Advisory <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="testing-qa.html">QA &amp; Test Automation <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="application-modernization.html">Legacy Modernization <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                        </div>
-                                        <div class="mega-services__panel" data-panel="strategy">
-                                            <a href="case-study-ppc.html">PPC Advertising <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="social-media-marketing.html">Social Media Strategy <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                            <a href="case-study-seo.html">SEO &amp; Digital Growth <i class="fas fa-arrow-up-right" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <aside class="mega-services__case">
-                                        <a href="case-study.html" class="mega-case-card">
-                                            <h4 class="mega-case-card__label">Case study</h4>
-                                            <div class="mega-case-card__media">
-                                                <img src="assets/images/neoxweb/portfolio-web.jpg" alt="Education platform project" width="320" height="200" loading="lazy">
-                                                <span class="mega-case-card__badge">Education &amp; eLearning</span>
-                                            </div>
-                                            <strong>Platform modernization for learning products</strong>
-                                            <p>How we approach legacy upgrades — UX improvements, performance, and scalable architecture for education platforms.</p>
+
+
+                <!-- LINKS -->
+                <ul class="nxv-menu">
+
+                    <li class="nxv-menu-item">
+                        <a
+                            href="index.html"
+                            class="nxv-menu-link"
+                            data-nav="index"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li class="nxv-menu-item">
+                        <a
+                            href="about.html"
+                            class="nxv-menu-link"
+                            data-nav="about"
+                        >
+                            About
+                        </a>
+                    </li>
+
+
+                    <!-- SERVICES -->
+                    <li
+                        class="nxv-menu-item nxv-has-dropdown"
+                        id="megaTrigger"
+                    >
+
+                        <a
+                            href="services.html"
+                            class="nxv-menu-link"
+                            data-nav="services"
+                        >
+                            Services
+
+                            <i
+                                class="fas fa-chevron-down nxv-arrow"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+
+
+                        <div class="nxv-mega nxv-services-mega">
+
+                            <div class="nxv-mega-inner">
+
+                                <div class="nxv-services-content">
+
+                                    <div class="nxv-services-list">
+
+                                        <a href="web.html">
+                                            <span>Website Development</span>
+                                            <i class="fas fa-arrow-up-right"></i>
                                         </a>
-                                    </aside>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="mega-dropdown-trigger" id="techMegaTrigger">
-                        <a href="technologies.html" data-nav="technologies">Technologies <i class="fas fa-chevron-down nav-chevron" aria-hidden="true"></i></a>
-                        <div class="mega-menu mega-menu--tech mega-menu--unified">
-                            <div class="mega-unified">
-                                <aside class="mega-unified__intro">
-                                    <h3>Technologies</h3>
-                                    <p>Our expertise spans all major technologies and platforms — from backend APIs to mobile apps and cloud infrastructure.</p>
-                                    <a href="technologies.html" class="mega-unified__cta">All Technology Expertise <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
-                                    <div class="mega-unified__trust">
-                                        <span class="mega-unified__trust-label">Based in Pakistan</span>
-                                        <div class="mega-unified__trust-badges">
-                                            <span class="mega-unified__badge">Lahore</span>
-                                            <span class="mega-unified__badge">Remote-friendly</span>
-                                        </div>
+
+                                        <a href="development.html">
+                                            <span>Web App Development</span>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </a>
+
+                                        <a href="mobile.html">
+                                            <span>Mobile App Development</span>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </a>
+
+                                        <a href="software-engineering.html">
+                                            <span>SEO (Search Engine Optimization)</span>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </a>
+
+                                        <a href="software-engineering.html">
+                                            <span>Custom Software Development</span>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </a>
+
+                                        <a href="saas-platforms.html">
+                                            <span>SaaS Development</span>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </a>
+
+                                        <a href="ecommerce-strategy.html">
+                                            <span>E-Commerce Development</span>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </a>
+
+                                        <a href="testing-qa.html">
+                                            <span>Testing &amp; Quality Assurance</span>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </a>
+
+                                        <a href="application-modernization.html">
+                                            <span>Application Modernization</span>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </a>
+
                                     </div>
-                                </aside>
-                                <div class="mega-unified__grid mega-unified__grid--tech">
-                                    <div class="mega-unified__col"><h4><a href="technologies.html">Backend</a> <i class="fas fa-arrow-up-right" aria-hidden="true"></i></h4><a href="tech-nodejs.html">Node.js (Express/Nest)</a><a href="tech-laravel.html">Laravel</a><a href="tech-python.html">Python</a></div>
-                                    <div class="mega-unified__col"><h4><a href="technologies.html">Frontend</a> <i class="fas fa-arrow-up-right" aria-hidden="true"></i></h4><a href="tech-javascript.html">JavaScript</a><a href="tech-angular.html">Angular</a><a href="tech-react.html">ReactJS</a><a href="tech-vue.html">Vue.JS</a></div>
-                                    <div class="mega-unified__col"><h4><a href="technologies.html">Mobile</a> <i class="fas fa-arrow-up-right" aria-hidden="true"></i></h4><a href="tech-react-native.html">React Native</a><a href="tech-ios.html">iOS Native</a><a href="tech-android.html">Android Native</a><a href="tech-flutter.html">Flutter</a></div>
-                                    <div class="mega-unified__col"><h4><a href="technologies.html">Cloud</a> <i class="fas fa-arrow-up-right" aria-hidden="true"></i></h4><a href="tech-aws.html">AWS Cloud</a><a href="tech-azure.html">Azure</a></div>
-                                    <div class="mega-unified__col"><h4><a href="technologies.html">CMS</a> <i class="fas fa-arrow-up-right" aria-hidden="true"></i></h4><a href="tech-wordpress.html">WordPress</a><a href="tech-drupal.html">Drupal</a><a href="tech-woocommerce.html">WooCommerce</a></div>
-                                    <div class="mega-unified__col"><h4><a href="technologies.html">Database</a> <i class="fas fa-arrow-up-right" aria-hidden="true"></i></h4><a href="tech-mongodb.html">MongoDB</a><a href="tech-mysql.html">MySQL</a></div>
-                                    <div class="mega-unified__col"><h4><a href="technologies.html">Automation</a> <i class="fas fa-arrow-up-right" aria-hidden="true"></i></h4><a href="tech-playwright.html">Playwright</a></div>
+
+
+                                    <!-- CASE STUDY -->
+                                    <aside class="nxv-case">
+
+                                        <a
+                                            href="case-study.html"
+                                            class="nxv-case-card"
+                                        >
+
+                                            <span class="nxv-case-label">
+                                                Case Study
+                                            </span>
+
+                                            <div class="nxv-case-image">
+
+                                                <img
+                                                    src="assets/images/neoxweb/portfolio-web.jpg"
+                                                    alt="Education platform project"
+                                                    width="320"
+                                                    height="200"
+                                                    loading="lazy"
+                                                >
+
+                                                <span class="nxv-case-badge">
+                                                    Education &amp; eLearning
+                                                </span>
+
+                                            </div>
+
+                                            <h4>
+                                                Platform modernization
+                                                for learning products
+                                            </h4>
+
+                                            <p>
+                                                UX improvements, performance,
+                                                and scalable architecture for
+                                                education platforms.
+                                            </p>
+
+                                        </a>
+
+                                    </aside>
+
                                 </div>
+
                             </div>
+
                         </div>
+
                     </li>
-                    <li><a href="portfolio.html" data-nav="portfolio">Portfolio</a></li>
+
+
+                    <!-- TECHNOLOGIES -->
+                    <li
+                        class="nxv-menu-item nxv-has-dropdown"
+                        id="techMegaTrigger"
+                    >
+
+                        <a
+                            href="technologies.html"
+                            class="nxv-menu-link"
+                            data-nav="technologies"
+                        >
+                            Technologies
+
+                            <i
+                                class="fas fa-chevron-down nxv-arrow"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+
+
+                        <div class="nxv-mega nxv-tech-mega">
+
+                            <div class="nxv-mega-inner nxv-tech-layout">
+
+                                <!-- INTRO -->
+                                <aside class="nxv-tech-intro">
+
+                                    <span class="nxv-small-label">
+                                        TECHNOLOGY
+                                    </span>
+
+                                    <h3>
+                                        Technologies
+                                    </h3>
+
+                                    <p>
+                                        Our expertise spans major technologies
+                                        and platforms — from backend APIs to
+                                        mobile apps and cloud infrastructure.
+                                    </p>
+
+                                    <a
+                                        href="technologies.html"
+                                        class="nxv-tech-button"
+                                    >
+                                        All Technology Expertise
+
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+
+                                    <div class="nxv-location">
+
+                                        <span>
+                                            Based in Pakistan
+                                        </span>
+
+                                        <div class="nxv-location-tags">
+                                            <span>Lahore</span>
+                                            <span>Remote-friendly</span>
+                                        </div>
+
+                                    </div>
+
+                                </aside>
+
+
+                                <!-- TECHNOLOGY GRID -->
+                                <div class="nxv-tech-grid">
+
+                                    <div class="nxv-tech-column">
+
+                                        <h4>
+                                            <a href="technologies.html">
+                                                Backend
+                                            </a>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </h4>
+
+                                        <a href="tech-nodejs.html">
+                                            Node.js (Express/Nest)
+                                        </a>
+
+                                        <a href="tech-laravel.html">
+                                            Laravel
+                                        </a>
+
+                                        <a href="tech-python.html">
+                                            Python
+                                        </a>
+
+                                    </div>
+
+
+                                    <div class="nxv-tech-column">
+
+                                        <h4>
+                                            <a href="technologies.html">
+                                                Frontend
+                                            </a>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </h4>
+
+                                        <a href="tech-javascript.html">
+                                            JavaScript
+                                        </a>
+
+                                        <a href="tech-angular.html">
+                                            Angular
+                                        </a>
+
+                                        <a href="tech-react.html">
+                                            ReactJS
+                                        </a>
+
+                                        <a href="tech-vue.html">
+                                            Vue.JS
+                                        </a>
+
+                                    </div>
+
+
+                                    <div class="nxv-tech-column">
+
+                                        <h4>
+                                            <a href="technologies.html">
+                                                Mobile
+                                            </a>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </h4>
+
+                                        <a href="tech-react-native.html">
+                                            React Native
+                                        </a>
+
+                                        <a href="tech-ios.html">
+                                            iOS Native
+                                        </a>
+
+                                        <a href="tech-android.html">
+                                            Android Native
+                                        </a>
+
+                                        <a href="tech-flutter.html">
+                                            Flutter
+                                        </a>
+
+                                    </div>
+
+
+                                    <div class="nxv-tech-column">
+
+                                        <h4>
+                                            <a href="technologies.html">
+                                                Cloud
+                                            </a>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </h4>
+
+                                        <a href="tech-aws.html">
+                                            AWS Cloud
+                                        </a>
+
+                                        <a href="tech-azure.html">
+                                            Azure
+                                        </a>
+
+                                    </div>
+
+
+                                    <div class="nxv-tech-column">
+
+                                        <h4>
+                                            <a href="technologies.html">
+                                                CMS
+                                            </a>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </h4>
+
+                                        <a href="tech-wordpress.html">
+                                            WordPress
+                                        </a>
+
+                                        <a href="tech-drupal.html">
+                                            Drupal
+                                        </a>
+
+                                        <a href="tech-woocommerce.html">
+                                            WooCommerce
+                                        </a>
+
+                                    </div>
+
+
+                                    <div class="nxv-tech-column">
+
+                                        <h4>
+                                            <a href="technologies.html">
+                                                Database
+                                            </a>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </h4>
+
+                                        <a href="tech-mongodb.html">
+                                            MongoDB
+                                        </a>
+
+                                        <a href="tech-mysql.html">
+                                            MySQL
+                                        </a>
+
+                                    </div>
+
+
+                                    <div class="nxv-tech-column">
+
+                                        <h4>
+                                            <a href="technologies.html">
+                                                Automation
+                                            </a>
+                                            <i class="fas fa-arrow-up-right"></i>
+                                        </h4>
+
+                                        <a href="tech-playwright.html">
+                                            Playwright
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+                    <li class="nxv-menu-item">
+
+                        <a
+                            href="portfolio.html"
+                            class="nxv-menu-link"
+                            data-nav="portfolio"
+                        >
+                            Portfolio
+                        </a>
+
+                    </li>
+
                 </ul>
-                <div class="navbar__drawer-footer">
-                    <a href="contact.html" class="navbar__drawer-contact navbar__contact-btn" id="drawerContactBtn" aria-label="Contact NEOXWEB">
-                        Contact Us <i class="fas fa-chevron-right" aria-hidden="true"></i>
+
+
+                <!-- MOBILE CONTACT -->
+                <div class="nxv-mobile-footer">
+
+                    <a
+                        href="contact.html"
+                        class="nxv-contact-mobile"
+                        id="drawerContactBtn"
+                    >
+                        Contact Us
+
+                        <i class="fas fa-arrow-right"></i>
                     </a>
+
                 </div>
+
             </nav>
 
-            <div class="navbar__tools">
-                <div class="navbar__search" id="navSearchWrap">
-                    <div class="nav-search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                        <input type="search" id="navSearchInput" placeholder="Search services, technologies..." autocomplete="off" aria-label="Search site">
-                    </div>
-                    <div class="nav-search-results" id="navSearchResults" hidden></div>
-                </div>
-                <div class="navbar__actions">
-                    <div id="authSection"></div>
-                    <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Open search"><i class="fas fa-search" aria-hidden="true"></i></button>
-                    <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 
-<div class="nav-modal-backdrop" id="navModalBackdrop" aria-hidden="true"></div>
-<!-- NAVBAR-MODALS-END -->
+            <!-- RIGHT SIDE -->
+            <div class="nxv-actions">
+
+                <!-- DESKTOP SEARCH -->
+                <div
+                    class="nxv-desktop-search"
+                    id="navSearchWrap"
+                >
+
+                    <div class="nxv-search-box">
+
+                        <i
+                            class="fas fa-search"
+                            aria-hidden="true"
+                        ></i>
+
+                        <input
+                            type="search"
+                            id="navSearchInput"
+                            placeholder="Search services, technologies..."
+                            autocomplete="off"
+                            aria-label="Search site"
+                        >
+
+                    </div>
+
+                    <div
+                        class="nxv-search-results"
+                        id="navSearchResults"
+                        hidden
+                    ></div>
+
+                </div>
+
+
+                <!-- AUTH -->
+                <div
+                    class="nxv-auth"
+                    id="authSection"
+                ></div>
+
+
+                <!-- SEARCH BUTTON -->
+                <button
+                    type="button"
+                    class="nxv-search-trigger"
+                    id="navSearchToggle"
+                    aria-label="Open search"
+                >
+                    <i class="fas fa-search"></i>
+                </button>
+
+
+                <!-- HAMBURGER -->
+                <button
+                    type="button"
+                    class="nxv-menu-trigger"
+                    id="hamburger"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="navMenu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div
+        class="nxv-modal-overlay"
+        id="navModalBackdrop"
+        aria-hidden="true"
+    ></div>
 
 </div>

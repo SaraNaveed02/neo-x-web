@@ -206,8 +206,9 @@
         justify-content: space-between;
         padding-left: 0;
         padding-right: 0.85rem;
-        background: rgba(0, 0, 0, 0.92);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.96) !important;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+        color: #111111 !important;
     }
 
     body.nx-app-body .ui-mobile-logo {
@@ -237,9 +238,9 @@
         width: 38px;
         height: 38px;
         border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        background: transparent;
-        color: #fff;
+        border: 1px solid rgba(17, 17, 17, 0.12);
+        background: #ffffff;
+        color: #111111;
         display: grid;
         place-items: center;
         font-size: 0.95rem;

@@ -27,8 +27,8 @@ body.ui-ref-theme .ui-topbar { display: none !important; }
 
 /* ── Header ── */
 body.ui-ref-theme .ui-header {
-    background: transparent;
-    border-bottom: none;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
     height: auto;
     padding: 1rem 0 0.5rem;
     position: absolute;
@@ -40,9 +40,9 @@ body.ui-ref-theme .ui-header {
 
 body.ui-ref-theme .ui-header.ui-header--scrolled {
     position: fixed;
-    background: rgba(5, 5, 8, 0.92);
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
     padding: 0.75rem 0;
 }
 
@@ -50,15 +50,15 @@ body.ui-ref-theme .ui-logo-mark {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: var(--ui-ref-grad);
+    background: linear-gradient(90deg, #22c55e 0%, #0ea5e9 100%);
     font-size: 1.15rem;
     font-weight: 800;
     color: #fff;
-    box-shadow: 0 4px 20px rgba(45, 212, 191, 0.35);
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.2);
 }
 
 body.ui-ref-theme .ui-logo-text {
-    color: #fff;
+    color: #111111;
     font-weight: 700;
     font-size: 1.05rem;
 }
@@ -79,25 +79,25 @@ body.ui-ref-theme .ui-btn-icon {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1.5px solid var(--ui-ref-border);
-    background: transparent;
-    color: #fff;
+    border: 1.5px solid rgba(17, 17, 17, 0.12);
+    background: #fff;
+    color: #111111;
 }
 
 body.ui-ref-theme .ui-hamburger {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1.5px solid var(--ui-ref-border);
+    border: 1.5px solid rgba(17, 17, 17, 0.12);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
-    background: transparent;
+    background: #fff;
 }
 
 body.ui-ref-theme .ui-hamburger span { display: none; }
-body.ui-ref-theme .ui-hamburger i { color: #fff; font-size: 1rem; }
+body.ui-ref-theme .ui-hamburger i { color: #111111; font-size: 1rem; }
 
 @media (min-width: 1100px) {
     body.ui-ref-theme .ui-nav { display: flex; }
@@ -111,13 +111,13 @@ body.ui-ref-theme .ui-hamburger i { color: #fff; font-size: 1rem; }
 
 /* Mobile drawer dark */
 body.ui-ref-theme .ui-mobile-nav {
-    background: #0a0a10;
-    border-left: 1px solid rgba(255,255,255,0.08);
+    background: #ffffff;
+    border-left: 1px solid rgba(17, 17, 17, 0.08);
 }
 
 body.ui-ref-theme .ui-mobile-nav a {
-    color: rgba(255,255,255,0.85);
-    border-bottom-color: rgba(255,255,255,0.08);
+    color: #111111;
+    border-bottom-color: rgba(17, 17, 17, 0.08);
 }
 
 /* ── Hero (reference) ── */
