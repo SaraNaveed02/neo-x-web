@@ -114,10 +114,54 @@
 }
 
 
-.nxv-menu-link:hover {
+.nxv-menu-link:hover,
+.nxv-menu-link:focus-visible {
     color: var(--nxv-green);
 }
 
+.navbar__contact-btn,
+.navbar__login-btn,
+.navbar__login-btn--label,
+#contactNavBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+    padding: 0.8rem 1.5rem;
+
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    border-radius: 999px;
+
+    background: linear-gradient(135deg, #eafff1 0%, #d5f7e1 100%);
+    color: #0f172a;
+
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+
+    box-shadow: 0 12px 24px rgba(34, 197, 94, 0.12);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.navbar__contact-btn:hover,
+.navbar__login-btn:hover,
+#contactNavBtn:hover,
+.navbar__contact-btn:focus-visible,
+.navbar__login-btn:focus-visible,
+#contactNavBtn:focus-visible {
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    color: #0f172a;
+    border-color: rgba(34, 197, 94, 0.4);
+    box-shadow: 0 16px 28px rgba(34, 197, 94, 0.2);
+    transform: translateY(-1px);
+}
 
 .nxv-arrow {
     font-size: 10px;
@@ -344,7 +388,8 @@
 
 
 .nxv-services-list a {
-    min-height: 48px;
+    position: relative;
+    min-height: 52px;
 
     display: flex;
     align-items: center;
@@ -352,42 +397,75 @@
 
     gap: 15px;
 
-    padding: 10px 12px;
+    padding: 11px 14px;
 
     color: var(--nxv-text);
     text-decoration: none;
 
-    border-radius: 8px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    background: rgba(17, 24, 39, 0.02);
 
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
 
+    overflow: hidden;
     transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        padding-left 0.2s ease;
+        background 0.22s ease,
+        border-color 0.22s ease,
+        color 0.22s ease,
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        padding-left 0.22s ease;
 }
 
+.nxv-services-list a::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0;
+    background: linear-gradient(90deg, rgba(34, 197, 94, 0.12), rgba(34, 197, 94, 0));
+    transition: width 0.28s ease;
+}
+
+.nxv-services-list a span {
+    position: relative;
+    z-index: 1;
+}
 
 .nxv-services-list a i {
+    position: relative;
+    z-index: 1;
     font-size: 11px;
     opacity: 0;
+    color: currentColor;
 
-    transform: translateX(-5px);
+    transform: translateX(-6px);
 
-    transition: 0.2s ease;
+    transition: 0.22s ease;
 }
 
-
-.nxv-services-list a:hover {
-    background: #f0fdf4;
-    color: var(--nxv-green);
-
-    padding-left: 16px;
+.nxv-services-list a:hover,
+.nxv-services-list a:focus-visible,
+.nxv-services-list a.active {
+    background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+    color: #ffffff;
+    border-color: rgba(74, 222, 128, 0.28);
+    box-shadow: 0 12px 22px rgba(15, 23, 42, 0.12);
+    padding-left: 18px;
+    transform: translateX(2px);
 }
 
+.nxv-services-list a:hover::before,
+.nxv-services-list a:focus-visible::before,
+.nxv-services-list a.active::before {
+    width: 100%;
+}
 
-.nxv-services-list a:hover i {
+.nxv-services-list a:hover i,
+.nxv-services-list a:focus-visible i,
+.nxv-services-list a.active i {
     opacity: 1;
     transform: translateX(0);
 }
@@ -991,23 +1069,27 @@
         justify-content: center;
         gap: 10px;
 
-        border-radius: 8px;
+        border: 1px solid rgba(74, 222, 128, 0.35);
+        border-radius: 999px;
 
-        background: var(--nxv-dark);
-        color: #ffffff;
+        background: linear-gradient(135deg, #eafff1 0%, #d5f7e1 100%);
+        color: #0f172a;
 
         text-decoration: none;
 
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 700;
 
+        box-shadow: 0 12px 22px rgba(34, 197, 94, 0.12);
         transition: 0.25s ease;
     }
 
 
-    .nxv-contact-mobile:hover {
-        background: var(--nxv-green);
-        color: #111827;
+    .nxv-contact-mobile:hover,
+    .nxv-contact-mobile:focus-visible {
+        background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+        color: #0f172a;
+        transform: translateY(-1px);
     }
 
 
@@ -1167,6 +1249,16 @@ html body .nxv-shell .nxv-mobile-footer {
     #mainNavbar .navbar__drawer-contact,
     body.nx-app-body .ui-mobile-icon-btn {
         background: transparent !important;
+    }
+
+    #mainNavbar .nav-links > li > a:hover,
+    #mainNavbar .nav-links > li > a:focus-visible,
+    #mainNavbar .nav-links > li > a.active,
+    #mainNavbar .navbar__drawer-contact:hover,
+    #mainNavbar .navbar__drawer-contact:focus-visible,
+    body.nx-app-body .ui-mobile-icon-btn:hover,
+    body.nx-app-body .ui-mobile-icon-btn:focus-visible {
+        color: #22c55e !important;
     }
 
     #mainNavbar .hamburger span {

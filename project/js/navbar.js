@@ -336,6 +336,41 @@ function initServicesMegaPanels() {
     });
 }
 
+function initNxvServiceHoverEffects() {
+    const links = document.querySelectorAll('.nxv-service-link');
+    const caseCard = document.getElementById('nxvCaseStudyCard');
+    const image = document.getElementById('nxvCaseStudyImage');
+    const badge = document.getElementById('nxvCaseStudyBadge');
+    const title = document.getElementById('nxvCaseStudyTitle');
+    const description = document.getElementById('nxvCaseStudyDescription');
+
+    if (!links.length || !caseCard || !image || !badge || !title || !description) return;
+
+    const setCaseStudy = (link) => {
+        const nextImage = link.dataset.image || image.getAttribute('src');
+        const nextBadge = link.dataset.badge || badge.textContent;
+        const nextTitle = link.dataset.title || title.textContent;
+        const nextDescription = link.dataset.description || description.textContent;
+        const nextUrl = link.dataset.url || caseCard.getAttribute('href');
+
+        links.forEach((item) => item.classList.toggle('active', item === link));
+        image.src = nextImage;
+        image.alt = nextTitle;
+        badge.textContent = nextBadge;
+        title.textContent = nextTitle;
+        description.textContent = nextDescription;
+        caseCard.setAttribute('href', nextUrl);
+    };
+
+    links.forEach((link) => {
+        link.addEventListener('mouseenter', () => setCaseStudy(link));
+        link.addEventListener('focus', () => setCaseStudy(link));
+        link.addEventListener('click', () => setCaseStudy(link));
+    });
+
+    setCaseStudy(document.querySelector('.nxv-service-link.active') || links[0]);
+}
+
 function initMegaServiceLinks() {
     document.querySelectorAll('.mega-menu--services .mega-services__panel a[href]').forEach((link) => {
         if (link.dataset.navBound === '1') return;
@@ -456,6 +491,7 @@ function attachNavbarEvents() {
     initNavSearch(document.getElementById('navSearchInput'), document.getElementById('navSearchResults'));
     initNavSearch(document.getElementById('navSearchInputMobile'), document.getElementById('navSearchResultsMobile'));
     initServicesMegaPanels();
+    initNxvServiceHoverEffects();
     initMegaServiceLinks();
 
     setActiveNavLink();
