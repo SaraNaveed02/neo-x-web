@@ -58,10 +58,12 @@
 
 
 .nxv-brand-image {
-    width: 106px;
-    height: 40px;
+    width: 132px;
+    height: 52px;
     object-fit: contain;
     display: block;
+    background: #ffffff;
+    border-radius: 6px;
 }
 
 
@@ -889,9 +891,11 @@
 
 
     .nxv-mobile-logo {
-        width: 110px;
-        height: 44px;
+        width: 132px;
+        height: 52px;
         object-fit: contain;
+        background: #ffffff;
+        border-radius: 6px;
     }
 
 
@@ -1128,8 +1132,8 @@
 
 
     .nxv-brand-image {
-        width: 94px;
-        height: 36px;
+        width: 118px;
+        height: 46px;
     }
 
 

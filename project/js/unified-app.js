@@ -69,10 +69,6 @@
 
         document.body.insertAdjacentHTML('afterbegin', `
             <div id="appProgress" class="app-progress" aria-hidden="true"></div>
-            <div id="appLoader" class="app-loader" aria-live="polite">
-                <div class="app-loader__logo">NEOX<span>WEB</span></div>
-                <div class="app-loader__spinner"></div>
-            </div>
             <div id="appToastStack" class="app-toast-stack" aria-live="polite"></div>
             <div id="appSearchBackdrop" class="app-search-backdrop" aria-hidden="true"></div>
             <div id="appSearchPanel" class="app-search-panel" role="dialog" aria-label="Search">
@@ -97,8 +93,7 @@
     function hideLoader() {
         const loader = qs('#appLoader');
         if (loader) {
-            loader.classList.add('hidden');
-            setTimeout(() => loader.remove(), 500);
+            loader.remove();
         }
     }
 
@@ -307,8 +302,6 @@
         initCaseSlider();
         injectRefNav();
 
-        if (document.readyState === 'complete') hideLoader();
-        else global.addEventListener('load', hideLoader);
     }
 
     global.initUnifiedApp = initUnifiedApp;

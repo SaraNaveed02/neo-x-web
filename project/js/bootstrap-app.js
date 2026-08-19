@@ -354,24 +354,7 @@ const NexuraApp = (() => {
     }
 
     function injectPageLoader() {
-        if (document.getElementById('nxPageLoader')) return;
-        if (document.readyState === 'complete') return;
-
-        const loader = document.createElement('div');
-        loader.id = 'nxPageLoader';
-        loader.className = 'nx-page-loader';
-        loader.innerHTML = `
-            <div class="nx-loader-ring"></div>
-            <span class="text-secondary small">Loading...</span>
-        `;
-        document.body.prepend(loader);
-
-        function hideLoader() {
-            setTimeout(() => loader.classList.add('hidden'), 350);
-        }
-
-        window.addEventListener('load', hideLoader, { once: true });
-        setTimeout(() => loader.classList.add('hidden'), 5000);
+        document.getElementById('nxPageLoader')?.remove();
     }
 
     function toast(message, type = 'success') {
@@ -440,7 +423,7 @@ const NexuraApp = (() => {
         if (document.body.classList.contains('auth-page')) return;
 
         const page = currentPage();
-        document.body.classList.add('nx-app-body', 'page-transition', 'has-dock');
+        document.body.classList.add('nx-app-body', 'has-dock');
         mobileEnhancePage();
 
         injectPageLoader();
@@ -451,7 +434,6 @@ const NexuraApp = (() => {
         injectToastContainer();
         setupPageTransitions();
 
-        setTimeout(() => document.body.classList.remove('page-transition'), 400);
     }
 
     function destroyShell() {
