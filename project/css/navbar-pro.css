@@ -9,7 +9,7 @@
     --nxv-text: #1f2937;
     --nxv-muted: #6b7280;
     --nxv-border: #e5e7eb;
-    --nxv-white: #ffffff;
+    --nxv-white: white;
     --nxv-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
 }
 
@@ -27,7 +27,7 @@
 
 .nxv-header {
     width: 100%;
-    background: #ffffff !important;
+    background: white !important;
     border-bottom: 1px solid #eeeeee;
     position: relative;
     z-index: 1001;
@@ -58,12 +58,10 @@
 
 
 .nxv-brand-image {
-    width: 132px;
-    height: 52px;
+    width: 106px;
+    height: 40px;
     object-fit: contain;
     display: block;
-    background: #ffffff;
-    border-radius: 6px;
 }
 
 
@@ -135,7 +133,7 @@
     border: 1px solid rgba(74, 222, 128, 0.35);
     border-radius: 999px;
 
-    background: linear-gradient(135deg, #eafff1 0%, #d5f7e1 100%);
+    background: white;
     color: #0f172a;
 
     font-size: 0.92rem;
@@ -213,7 +211,7 @@
     border: 1px solid #e5e7eb;
     border-radius: 9px;
 
-    background: #ffffff;
+    background: white;
 
     transition:
         border-color 0.25s ease,
@@ -263,7 +261,7 @@
     border: 1px solid var(--nxv-border);
     border-radius: 9px;
 
-    background: #ffffff;
+    background: white;
     color: var(--nxv-dark);
 
     cursor: pointer;
@@ -287,7 +285,7 @@
 
     width: 100%;
 
-    background: #ffffff;
+    background: white;
 
     border: 1px solid var(--nxv-border);
     border-radius: 12px;
@@ -313,7 +311,7 @@
 
     width: 900px;
 
-    background: #ffffff;
+    background: white;
 
     border: 1px solid #e8e8e8;
     border-radius: 16px;
@@ -342,7 +340,7 @@
     width: 14px;
     height: 14px;
 
-    background: #ffffff;
+    background: white;
 
     border-left: 1px solid #e8e8e8;
     border-top: 1px solid #e8e8e8;
@@ -452,7 +450,7 @@
 .nxv-services-list a:focus-visible,
 .nxv-services-list a.active {
     background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
-    color: #ffffff;
+    color: white;
     border-color: rgba(74, 222, 128, 0.28);
     box-shadow: 0 12px 22px rgba(15, 23, 42, 0.12);
     padding-left: 18px;
@@ -546,7 +544,7 @@
     border-radius: 6px;
 
     background: rgba(17, 24, 39, 0.85);
-    color: #ffffff;
+    color: white;
 
     font-size: 10px;
     font-weight: 600;
@@ -765,7 +763,7 @@
     border: 1px solid var(--nxv-border);
     border-radius: 9px;
 
-    background: #ffffff;
+    background: white;
 
     cursor: pointer;
 }
@@ -859,7 +857,7 @@
 
         display: block;
 
-        background: #ffffff;
+        background: white;
 
         overflow-y: auto;
 
@@ -891,11 +889,9 @@
 
 
     .nxv-mobile-logo {
-        width: 132px;
-        height: 52px;
+        width: 110px;
+        height: 44px;
         object-fit: contain;
-        background: #ffffff;
-        border-radius: 6px;
     }
 
 
@@ -906,7 +902,7 @@
         border: 1px solid var(--nxv-border);
         border-radius: 8px;
 
-        background: #ffffff;
+        background:white;
 
         color: var(--nxv-dark);
 
@@ -1076,7 +1072,7 @@
         border: 1px solid rgba(74, 222, 128, 0.35);
         border-radius: 999px;
 
-        background: linear-gradient(135deg, #eafff1 0%, #d5f7e1 100%);
+        background: white;
         color: #0f172a;
 
         text-decoration: none;
@@ -1132,8 +1128,8 @@
 
 
     .nxv-brand-image {
-        width: 118px;
-        height: 46px;
+        width: 94px;
+        height: 36px;
     }
 
 
@@ -1141,7 +1137,7 @@
         gap: 7px;
     }
 .nxv-navigation {
-    background: #ffffff;
+    background: white;
 }
 
     .nxv-search-trigger,
@@ -1197,7 +1193,7 @@
 .nxv-header,
 .nxv-header-inner,
 .nxv-navigation {
-    background-color: #ffffff !important;
+    background-color: white !important;
 }
 
 html body .nxv-shell .nxv-header,
@@ -1206,8 +1202,8 @@ html body .nxv-shell .nxv-navigation,
 html body .nxv-shell .nxv-mobile-top,
 html body .nxv-shell .nxv-mobile-search-area,
 html body .nxv-shell .nxv-mobile-footer {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
+    background-color: white !important;
+    background: white !important;
 }
 
 /* Force the actual injected navbar markup and app-style mobile top bar to stay white on mobile */
@@ -1225,8 +1221,8 @@ html body .nxv-shell .nxv-mobile-footer {
     #mainNavbar .nav-search,
     #mainNavbar .nav-search input,
     body.nx-app-body .ui-mobile-header__actions {
-        background: #ffffff !important;
-        background-color: #ffffff !important;
+        background: white !important;
+        background-color: white !important;
     }
 
     body.nx-app-body .nx-app-header.ui-mobile-header,

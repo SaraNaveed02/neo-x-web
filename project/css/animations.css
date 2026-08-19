@@ -24,6 +24,17 @@
     transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.motion-section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1), transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.motion-section.motion-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .fade-up.visible,
 .fade-up.revealed {
     opacity: 1;
@@ -54,4 +65,12 @@
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .motion-section { opacity: 1; transform: none; }
+}
+
+@media (max-width: 700px) {
+    .motion-section {
+        transform: translateY(24px);
+        transition-duration: 550ms;
+    }
 }
