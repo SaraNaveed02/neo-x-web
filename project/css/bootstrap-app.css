@@ -263,15 +263,7 @@ body.nx-app-body.page-transition {
 }
 
 .nx-bottom-nav a.active::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2rem;
-    height: 3px;
-    border-radius: 0 0 4px 4px;
-    background: linear-gradient(90deg, var(--nx-primary), var(--nx-accent));
+    display: none;
 }
 
 /* ── Main content area ── */

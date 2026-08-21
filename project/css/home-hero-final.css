@@ -483,13 +483,13 @@
 
         width: 100% !important;
 
-        min-height: 620px !important;
+        min-height: 760px !important;
 
         margin: 0 !important;
 
         padding: 0 !important;
 
-        overflow: hidden !important;
+        overflow: visible !important;
     }
 
 
@@ -556,13 +556,13 @@
         width: 100% !important;
         max-width: none !important;
 
-        min-height: 620px !important;
+        min-height: 760px !important;
 
         margin: 0 !important;
 
         padding-top: 90px !important;
         padding-right: 20px !important;
-        padding-bottom: 40px !important;
+        padding-bottom: 52px !important;
         padding-left: 20px !important;
 
         box-sizing: border-box !important;
@@ -661,10 +661,10 @@
 
 
     body.neoxweb-site .hero-section--pro .hero-actions {
-        width: auto !important;
-        margin-left: -20px !important; /* match container padding-left */
-        padding-left: 10px !important; /* keep inner spacing for button text */
-        padding-right: 10px !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
         box-sizing: border-box !important;
     }
 
@@ -694,5 +694,47 @@
     .neoxweb-site .hero-section--premium .hero-particles-canvas,
     .neoxweb-site .hero-section--premium-home .hero-particles-canvas {
         opacity: 0.35;
+    }
+}
+
+@media (max-width: 900px) {
+    body.neoxweb-site.service-page .web-hero.hero-section--pro {
+        min-height: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    body.neoxweb-site.service-page .web-hero-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: start !important;
+        align-self: stretch !important;
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-height: 0 !important;
+    }
+
+    body.neoxweb-site.service-page .web-hero-copy,
+    body.neoxweb-site.service-page .web-hero-visual {
+        order: initial !important;
+        align-self: stretch !important;
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    body.neoxweb-site.service-page .web-hero-actions {
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.8rem !important;
+    }
+
+    body.neoxweb-site.service-page .web-hero-actions .btn {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        box-sizing: border-box;
+        justify-content: center !important;
     }
 }

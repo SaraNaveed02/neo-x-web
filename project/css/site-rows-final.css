@@ -933,8 +933,7 @@
 }
 
 .neoxweb-site .service-panel,
-.neoxweb-site .web-case-card,
-.neoxweb-site .web-process-step {
+.neoxweb-site .web-case-card {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) !important;
     gap: clamp(0.85rem, 2vw, 1.35rem) !important;
@@ -943,6 +942,42 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
     text-align: left !important;
 }
+
+  .neoxweb-site.service-page .web-process-step {
+    display: block !important;
+    text-align: center !important;
+    padding: 1.5rem 1rem !important;
+    border-bottom: 0 !important;
+  }
+
+  .neoxweb-site.service-page .web-process-dot {
+    margin-inline: auto !important;
+  }
+
+  @media (max-width: 1024px) {
+    .neoxweb-site.service-page .web-process {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 600px) {
+    .neoxweb-site.service-page .web-process {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .neoxweb-site.service-page .web-process-step {
+      padding: 1.25rem 1rem !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: var(--radius, 12px);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .neoxweb-site.service-page .web-process-step p {
+      max-width: 32rem;
+      margin-inline: auto;
+    }
+  }
 
 .neoxweb-site .service-panel h3,
 .neoxweb-site .service-panel p,
@@ -1041,6 +1076,46 @@
         max-width: none !important;
     }
 }
+
+  @media (max-width: 900px) {
+    .neoxweb-site.service-page .web-hero {
+      min-height: auto !important;
+      height: auto !important;
+      overflow: visible !important;
+    }
+
+    .neoxweb-site.service-page .web-hero-grid {
+      grid-template-columns: 1fr !important;
+      align-items: start !important;
+      max-width: 100% !important;
+    }
+
+    .neoxweb-site.service-page .web-hero-copy,
+    .neoxweb-site.service-page .web-hero-visual {
+      grid-column: 1 !important;
+      width: 100% !important;
+      max-width: none !important;
+    }
+
+    .neoxweb-site.service-page .web-hero-actions {
+      width: 100% !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.8rem !important;
+    }
+
+    .neoxweb-site.service-page .web-hero-actions .btn {
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      box-sizing: border-box;
+      justify-content: center !important;
+    }
+
+    .neoxweb-site.service-page .web-hero-visual {
+      margin-inline: auto !important;
+    }
+  }
 
 /* Inner pages without premium hero — hide old bg */
 .neoxweb-site:not(.home-page) .nx-page-hero:not(.hero-section--premium) .hero-tech-bg,

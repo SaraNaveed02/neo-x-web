@@ -420,7 +420,7 @@ body.ui-ref-theme .app-mobile-dock { display: none !important; }
     z-index: 997;
     background: rgba(8, 8, 12, 0.96);
     backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: none;
     padding: 0.5rem 0.35rem calc(0.5rem + env(safe-area-inset-bottom, 0));
     align-items: flex-end;
     justify-content: space-around;

@@ -72,10 +72,40 @@ body.neoxweb-site svg {
         padding: clamp(5.5rem, 14vw, 7rem) 0 clamp(2.5rem, 6vw, 3.5rem) !important;
     }
 
+    body.neoxweb-site .hero-section--pro.nx-page-hero,
+    body.neoxweb-site .hero-section--pro.contact-page-hero,
+    body.neoxweb-site .hero-section--pro,
+    body.neoxweb-site .hero-section--neoxweb,
+    body.neoxweb-site .web-hero.hero-section--pro,
     .hero-section--pro.nx-page-hero,
-    .hero-section--pro.contact-page-hero {
+    .hero-section--pro.contact-page-hero,
+    .hero-section--pro,
+    .hero-section--neoxweb,
+    .web-hero.hero-section--pro {
         padding: 0 0 clamp(2.5rem, 6vw, 3.5rem) !important;
-        min-height: min(92vh, 800px) !important;
+        min-height: min(100vh, 860px) !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    body.neoxweb-site .hero-section--pro > .container,
+    body.neoxweb-site .hero-section--pro .hero-grid--bg,
+    body.neoxweb-site .web-hero.hero-section--pro > .container,
+    body.neoxweb-site .web-hero.hero-section--pro .web-hero-grid,
+    .hero-section--pro .hero-grid--bg,
+    .hero-section--pro .hero-grid,
+    .hero-section--neoxweb .hero-grid--bg,
+    .web-hero.hero-section--pro .web-hero-grid {
+        min-height: min(100vh, 860px) !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    body.neoxweb-site .hero-section--pro .hero-actions,
+    body.neoxweb-site .hero-section--pro .web-hero-actions {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
     }
 
     .hero-section--pro.nx-page-hero .nx-page-hero__inner,
