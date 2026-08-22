@@ -4,11 +4,13 @@
 
 .neoxweb-site .nx-img-strip {
     display: grid !important;
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    gap: clamp(1rem, 2.5vw, 1.5rem) !important;
-    max-width: min(1280px, 100%) !important;
-    margin-inline: auto !important;
-    align-items: stretch !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.15rem !important;
+    width: min(1280px, calc(100% - 2rem)) !important;
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
 .neoxweb-site .nx-img-strip + .nx-img-strip {
@@ -42,8 +44,8 @@
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    min-height: clamp(160px, 22vw, 220px) !important;
-    aspect-ratio: 16 / 11 !important;
+    min-height: clamp(120px, 16vw, 170px) !important;
+    aspect-ratio: 16 / 10 !important;
     border-radius: 0 !important;
     border: none !important;
     background: #0a0a0a !important;
@@ -58,7 +60,7 @@
     height: 100% !important;
     max-width: none !important;
     max-height: none !important;
-    min-height: clamp(160px, 22vw, 220px) !important;
+    min-height: clamp(120px, 16vw, 170px) !important;
     object-fit: cover !important;
     object-position: center !important;
     display: block !important;
@@ -69,7 +71,7 @@
 .neoxweb-site .nx-img-strip__body {
     grid-column: unset !important;
     order: unset !important;
-    padding: 1rem 1.1rem 1.2rem !important;
+    padding: 0.75rem 0.85rem 0.9rem !important;
     text-align: left !important;
 }
 
@@ -81,7 +83,7 @@
 }
 
 .neoxweb-site .nx-img-strip__body h3 {
-    font-size: clamp(1rem, 1.8vw, 1.15rem) !important;
+    font-size: clamp(0.95rem, 1.5vw, 1.05rem) !important;
     font-weight: 700 !important;
     line-height: 1.35 !important;
     margin: 0 0 0.5rem !important;
@@ -91,8 +93,8 @@
 
 .neoxweb-site .nx-img-strip__body p,
 .neoxweb-site .nx-img-strip__body .nx-quote {
-    font-size: clamp(0.875rem, 1.5vw, 0.95rem) !important;
-    line-height: 1.6 !important;
+    font-size: clamp(0.8rem, 1.25vw, 0.88rem) !important;
+    line-height: 1.5 !important;
     margin: 0 0 0.65rem !important;
     color: rgba(255, 255, 255, 0.78) !important;
     text-align: left !important;
@@ -131,6 +133,53 @@
     margin-top: 0.25rem !important;
 }
 
+/* Final card treatment: this file loads after the row layout overrides. */
+.neoxweb-site .nx-img-strip__card {
+    background: rgba(16, 28, 21, 0.82) !important;
+    border: 1px solid rgba(56, 211, 138, 0.2) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18) !important;
+    position: relative !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
+    animation: neoxCardFloat 0.9s ease both !important;
+}
+
+.neoxweb-site .nx-img-strip__card:nth-child(2) { animation-delay: 0.08s !important; }
+.neoxweb-site .nx-img-strip__card:nth-child(3) { animation-delay: 0.16s !important; }
+.neoxweb-site .nx-img-strip__card:nth-child(4) { animation-delay: 0.24s !important; }
+
+.neoxweb-site .nx-img-strip__card:hover {
+    transform: translateY(-8px) scale(1.01) !important;
+    border-color: #38d38a !important;
+    box-shadow: 0 22px 44px -18px rgba(0, 0, 0, 0.72), 0 0 26px rgba(56, 211, 138, 0.22) !important;
+}
+
+.neoxweb-site .nx-img-strip__card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(110deg, transparent 35%, rgba(255, 255, 255, 0.06) 50%, transparent 65%);
+    background-size: 220% 100%;
+    background-position: 120% 0;
+    transition: background-position 0.7s ease;
+}
+
+.neoxweb-site .nx-img-strip__card:hover::after {
+    background-position: -20% 0;
+}
+
+.neoxweb-site .nx-img-strip__card:hover .nx-img-strip__media img {
+    transform: scale(1.07) !important;
+    filter: saturate(1.08) brightness(1.06);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.neoxweb-site .nx-img-strip__card:hover .nx-img-strip__body h3 {
+    color: #38d38a !important;
+    transition: color 0.3s ease;
+}
+
 .neoxweb-site .nx-img-strip-wrap {
     display: flex !important;
     flex-direction: column !important;
@@ -157,7 +206,7 @@
 
     .neoxweb-site .nx-img-strip__media,
     .neoxweb-site .nx-img-strip__media img {
-        min-height: clamp(150px, 28vw, 200px) !important;
+        min-height: clamp(115px, 24vw, 155px) !important;
     }
 }
 
@@ -168,6 +217,6 @@
 
     .neoxweb-site .nx-img-strip__media,
     .neoxweb-site .nx-img-strip__media img {
-        min-height: 200px !important;
+        min-height: 165px !important;
     }
 }

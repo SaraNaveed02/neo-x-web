@@ -437,3 +437,191 @@ body.neoxweb-site {
         grid-template-columns: 1fr !important;
     }
 }
+
+.neoxweb-site .advantage-card,
+.neoxweb-site .case-card,
+.neoxweb-site .industry-card,
+.neoxweb-site .service-panel,
+.neoxweb-site .showcase-card,
+.neoxweb-site .svc-showcase-card,
+.neoxweb-site .web-why-card,
+.neoxweb-site .web-cap-card,
+.neoxweb-site .web-process-step,
+.neoxweb-site .ui-resource-card,
+.neoxweb-site .ui-blog-card,
+.neoxweb-site .ui-industry-card,
+.neoxweb-site .ui-cs-card,
+.neoxweb-site .cs-glass-card,
+.neoxweb-site .cs-related-card,
+.neoxweb-site .cs-featured-card,
+.neoxweb-site .contact-highlight-card,
+.neoxweb-site .capability-card,
+.neoxweb-site .process-card,
+.neoxweb-site .engage-card,
+.neoxweb-site .resource-card,
+.neoxweb-site .svc-advantage-card,
+.neoxweb-site .stack-card,
+.neoxweb-site .nx-card,
+.neoxweb-site .nx-why-card,
+.neoxweb-site .nx-process-card,
+.neoxweb-site .project-card,
+.neoxweb-site .qa-gallery-card,
+.neoxweb-site .testimonial-card,
+.neoxweb-site .pro-card,
+.neoxweb-site .nx-stack-card,
+.neoxweb-site .nx-team-card,
+.neoxweb-site .neox-service-card,
+.neoxweb-site .nx-pro-split,
+.neoxweb-site .nx-portfolio-row {
+    position: relative !important;
+    overflow: hidden !important;
+    background: rgba(16, 28, 21, 0.82) !important;
+    border: 1px solid rgba(56, 211, 138, 0.2) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18) !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.neoxweb-site .advantage-card:hover,
+.neoxweb-site .case-card:hover,
+.neoxweb-site .industry-card:hover,
+.neoxweb-site .service-panel:hover,
+.neoxweb-site .showcase-card:hover,
+.neoxweb-site .svc-showcase-card:hover,
+.neoxweb-site .web-why-card:hover,
+.neoxweb-site .web-cap-card:hover,
+.neoxweb-site .web-process-step:hover,
+.neoxweb-site .ui-resource-card:hover,
+.neoxweb-site .ui-blog-card:hover,
+.neoxweb-site .ui-industry-card:hover,
+.neoxweb-site .ui-cs-card:hover,
+.neoxweb-site .cs-glass-card:hover,
+.neoxweb-site .cs-related-card:hover,
+.neoxweb-site .cs-featured-card:hover,
+.neoxweb-site .contact-highlight-card:hover,
+.neoxweb-site .capability-card:hover,
+.neoxweb-site .process-card:hover,
+.neoxweb-site .engage-card:hover,
+.neoxweb-site .resource-card:hover,
+.neoxweb-site .svc-advantage-card:hover,
+.neoxweb-site .stack-card:hover,
+.neoxweb-site .nx-card:hover,
+.neoxweb-site .nx-why-card:hover,
+.neoxweb-site .nx-process-card:hover,
+.neoxweb-site .project-card:hover,
+.neoxweb-site .qa-gallery-card:hover,
+.neoxweb-site .testimonial-card:hover,
+.neoxweb-site .pro-card:hover,
+.neoxweb-site .nx-stack-card:hover,
+.neoxweb-site .nx-team-card:hover,
+.neoxweb-site .neox-service-card:hover,
+.neoxweb-site .nx-pro-split:hover,
+.neoxweb-site .nx-portfolio-row:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+    border-color: #38d38a !important;
+    box-shadow: 0 18px 36px -16px rgba(0, 0, 0, 0.75), 0 0 22px rgba(56, 211, 138, 0.2) !important;
+}
+
+.neoxweb-site .service-panel:not(.service-panel--has-photo),
+.neoxweb-site .svc-advantage-card,
+.neoxweb-site .nx-why-card,
+.neoxweb-site .nx-process-card {
+    padding: 1.15rem !important;
+}
+
+.neoxweb-site .service-panel h3,
+.neoxweb-site .service-panel--has-photo h3,
+.neoxweb-site .svc-advantage-card h4,
+.neoxweb-site .nx-why-card h3,
+.neoxweb-site .nx-process-card h3 {
+    font-size: clamp(0.98rem, 1.5vw, 1.12rem) !important;
+    line-height: 1.35 !important;
+}
+
+.neoxweb-site .service-panel p,
+.neoxweb-site .service-panel--has-photo p,
+.neoxweb-site .svc-advantage-card p,
+.neoxweb-site .nx-why-card p,
+.neoxweb-site .nx-process-card p {
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+}
+
+.neoxweb-site .service-panel__photo,
+.neoxweb-site .service-panel--has-photo .service-panel__photo {
+    max-height: 150px !important;
+    overflow: hidden !important;
+}
+
+.neoxweb-site .service-panel__photo img {
+    height: 150px !important;
+    object-fit: cover !important;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease !important;
+}
+
+.neoxweb-site .service-panel:hover .service-panel__photo img,
+.neoxweb-site .svc-showcase-card:hover img,
+.neoxweb-site .ui-blog-card:hover img,
+.neoxweb-site .ui-cs-card:hover img,
+.neoxweb-site .cs-related-card:hover img,
+.neoxweb-site .project-card:hover img {
+    transform: scale(1.06) !important;
+    filter: saturate(1.08) brightness(1.05);
+}
+
+.neoxweb-site .advantage-card::after,
+.neoxweb-site .case-card::after,
+.neoxweb-site .industry-card::after,
+.neoxweb-site .service-panel::after,
+.neoxweb-site .showcase-card::after,
+.neoxweb-site .svc-showcase-card::after,
+.neoxweb-site .ui-blog-card::after,
+.neoxweb-site .ui-cs-card::after,
+.neoxweb-site .cs-glass-card::after,
+.neoxweb-site .cs-related-card::after,
+.neoxweb-site .svc-advantage-card::after,
+.neoxweb-site .nx-why-card::after,
+.neoxweb-site .nx-process-card::after,
+.neoxweb-site .qa-gallery-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(110deg, transparent 38%, rgba(255, 255, 255, 0.06) 50%, transparent 62%);
+    background-size: 220% 100%;
+    background-position: 120% 0;
+    transition: background-position 0.7s ease;
+}
+
+.neoxweb-site .advantage-card:hover::after,
+.neoxweb-site .case-card:hover::after,
+.neoxweb-site .industry-card:hover::after,
+.neoxweb-site .service-panel:hover::after,
+.neoxweb-site .showcase-card:hover::after,
+.neoxweb-site .svc-showcase-card:hover::after,
+.neoxweb-site .ui-blog-card:hover::after,
+.neoxweb-site .ui-cs-card:hover::after,
+.neoxweb-site .cs-glass-card:hover::after,
+.neoxweb-site .cs-related-card:hover::after,
+.neoxweb-site .svc-advantage-card:hover::after,
+.neoxweb-site .nx-why-card:hover::after,
+.neoxweb-site .nx-process-card:hover::after,
+.neoxweb-site .qa-gallery-card:hover::after {
+    background-position: -20% 0;
+}
+
+@media (max-width: 640px) {
+    .neoxweb-site .service-panel:not(.service-panel--has-photo),
+    .neoxweb-site .svc-advantage-card,
+    .neoxweb-site .nx-why-card,
+    .neoxweb-site .nx-process-card {
+        padding: 0.9rem !important;
+    }
+
+    .neoxweb-site .service-panel__photo,
+    .neoxweb-site .service-panel--has-photo .service-panel__photo,
+    .neoxweb-site .service-panel__photo img {
+        max-height: 125px !important;
+        height: 125px !important;
+    }
+}
